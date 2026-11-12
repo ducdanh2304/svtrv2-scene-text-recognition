@@ -1,0 +1,23 @@
+# Data, generated images, checkpoints and logs
+data/
+datasets/
+outputs/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.tar
+*.tar.gz
+*.zip
+*.lmdb
+*.log
+__pycache__/
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+
+# Keep small result tables and source notebooks tracked.
+!**/results.csv
+!**/*.ipynb

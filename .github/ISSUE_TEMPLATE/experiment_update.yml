@@ -1,0 +1,35 @@
+name: Cập nhật thí nghiệm
+description: Đăng ký thử nghiệm hoặc báo kết quả mới
+title: "[EXP] Thành viên — hướng — phương pháp"
+body:
+  - type: input
+    id: owner
+    attributes:
+      label: Người phụ trách
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Trạng thái
+      options:
+        - planned
+        - running
+        - completed
+        - blocked
+        - no_improvement
+    validations:
+      required: true
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Baseline, phương pháp, dữ liệu và metric
+      description: Ghi rõ checkpoint, split/số mẫu, seed, Word Accuracy và CER.
+    validations:
+      required: true
+  - type: input
+    id: artifact
+    attributes:
+      label: Link code/log/checkpoint
+    validations:
+      required: true
