@@ -6,6 +6,8 @@ Repository chung để nhóm lưu code thí nghiệm và theo dõi tiến độ 
 
 Mỗi người cập nhật `tracker/experiments.csv` khi bắt đầu, có kết quả hoặc kết thúc một thử nghiệm. Trạng thái dùng thống nhất: `planned`, `running`, `completed`, `blocked`, `no_improvement`.
 
+Quy trình đầy đủ về mã EXP/RUN, branch, kết quả và Pull Request nằm trong [`docs/TEAM_WORKFLOW.md`](docs/TEAM_WORKFLOW.md).
+
 | Thành viên | Hướng | Thư mục làm việc |
 |---|---|---|
 | Danh | Tiếp tục thử và cải tiến hướng feature-level đã có tín hiệu tốt trên motion blur | `experiments/danh_motion_blur/` |

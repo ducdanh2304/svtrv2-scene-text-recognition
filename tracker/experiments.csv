@@ -1,5 +1,5 @@
-experiment_id,owner,topic,status,method,baseline,dataset,split,seed,word_accuracy_before,word_accuracy_after,delta_pp,cer_before,cer_after,code_path,config_path,log_or_artifact_url,updated_at,notes
-EXP-001,Danh,motion_blur,planned,,,,,,,,,,,,,,,
-EXP-002,Thúy,motion_blur,planned,,,,,,,,,,,,,,,
-EXP-003,Thư,artistic_font,planned,,,,,,,,,,,,,,,
-EXP-004,Trúc,artistic_font,planned,,,,,,,,,,,,,,,
+experiment_id,run_id,owner,topic,status,method,baseline,dataset,split,seed,word_accuracy_before,word_accuracy_after,delta_pp,cer_before,cer_after,code_path,config_path,log_or_artifact_url,updated_at,notes
+EXP-001,RUN-001,Danh,motion_blur,planned,,,,,,,,,,,,,,,
+EXP-002,RUN-002,Thúy,motion_blur,planned,,,,,,,,,,,,,,,
+EXP-003,RUN-003,Thư,artistic_font,planned,,,,,,,,,,,,,,,
+EXP-004,RUN-004,Trúc,artistic_font,planned,,,,,,,,,,,,,,,
