@@ -1,0 +1,13 @@
+criterion,passed
+evaluation/IIIT5k exact >= SVTRv2-T original,True
+evaluation/IIIT5k CER <= SVTRv2-T original,True
+evaluation/CUTE80 exact >= SVTRv2-T original,True
+evaluation/CUTE80 CER <= SVTRv2-T original,True
+Multi-Oriented exact >= Unified v1,True
+Multi-Oriented CER <= SVTRv2-T original,True
+Multi-Words exact >= SVTRv2-T original,True
+LTB exact >= Unified v1,True
+LTB CER <= Unified v1,True
+LTB 26-35 exact >= Unified v1,True
+LTB 36-55 exact >= Unified v1,True
+LTB 56+ exact >= Unified v1,True

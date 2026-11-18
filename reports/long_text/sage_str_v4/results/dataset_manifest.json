@@ -1,0 +1,18 @@
+{
+  "data_repo": "topdu/OpenOCR-Data",
+  "data_revision": "d59c13643f1d7f92831625fe161e2c19ec3d7f52",
+  "dataset_paths": {
+    "u14m/multi_oriented": "multi_oriented/data.mdb",
+    "u14m/multi_words": "multi_words/data.mdb",
+    "evaluation/IIIT5k": "IIIT5k/data.mdb",
+    "evaluation/CUTE80": "CUTE80/data.mdb"
+  },
+  "dataset_names": [
+    "u14m/multi_oriented",
+    "u14m/multi_words",
+    "evaluation/IIIT5k",
+    "evaluation/CUTE80"
+  ],
+  "max_per_dataset": 256,
+  "ltb_exact_pixel_overlap_checked": false
+}

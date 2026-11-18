@@ -1,0 +1,131 @@
+{
+  "cohort_invariant_split": "cs406-sage-v4-locked-splits-v1",
+  "limits": [
+    0.44,
+    0.55,
+    0.66,
+    0.8,
+    1.0
+  ],
+  "splits": {
+    "train": 1003,
+    "calibration": 230,
+    "tune": 224,
+    "audit": 306,
+    "eval": 461
+  },
+  "v4": {
+    "calibration": {
+      "orientation": {
+        "temperature": 1.5898403775692607,
+        "n": 27,
+        "nll": 0.5638177623901657
+      },
+      "recovery": {
+        "temperature": 0.672556085538462,
+        "n": 175,
+        "nll": 0.39525032046809094
+      }
+    },
+    "tune": {
+      "thresholds": {
+        "orientation": 0.65,
+        "recovery": -0.1
+      },
+      "tune": {
+        "wins": 10,
+        "harms": 0,
+        "edit_gain": 201,
+        "promoted": 27,
+        "n": 224
+      },
+      "by_source": {
+        "LTB": {
+          "wins": 4,
+          "harms": 0,
+          "edit_gain": 187,
+          "promoted": 18,
+          "n": 117
+        },
+        "u14m/multi_oriented": {
+          "wins": 4,
+          "harms": 0,
+          "edit_gain": 12,
+          "promoted": 5,
+          "n": 34
+        },
+        "u14m/multi_words": {
+          "wins": 2,
+          "harms": 0,
+          "edit_gain": 2,
+          "promoted": 4,
+          "n": 28
+        },
+        "evaluation/IIIT5k": {
+          "wins": 0,
+          "harms": 0,
+          "edit_gain": 0,
+          "promoted": 0,
+          "n": 23
+        },
+        "evaluation/CUTE80": {
+          "wins": 0,
+          "harms": 0,
+          "edit_gain": 0,
+          "promoted": 0,
+          "n": 22
+        }
+      }
+    },
+    "audit": {
+      "passed": true,
+      "n": 306,
+      "summary": {
+        "wins": 20,
+        "harms": 2,
+        "edit_gain": 366,
+        "promoted": 45,
+        "n": 306
+      },
+      "by_source": {
+        "LTB": {
+          "wins": 12,
+          "harms": 2,
+          "edit_gain": 348,
+          "promoted": 37,
+          "n": 168
+        },
+        "u14m/multi_oriented": {
+          "wins": 6,
+          "harms": 0,
+          "edit_gain": 13,
+          "promoted": 6,
+          "n": 45
+        },
+        "u14m/multi_words": {
+          "wins": 2,
+          "harms": 0,
+          "edit_gain": 5,
+          "promoted": 2,
+          "n": 28
+        },
+        "evaluation/IIIT5k": {
+          "wins": 0,
+          "harms": 0,
+          "edit_gain": 0,
+          "promoted": 0,
+          "n": 25
+        },
+        "evaluation/CUTE80": {
+          "wins": 0,
+          "harms": 0,
+          "edit_gain": 0,
+          "promoted": 0,
+          "n": 40
+        }
+      },
+      "note": "Development audit; no OOD guarantee or conformal claim"
+    }
+  },
+  "warning": "All benchmark sources have been historically inspected. Development evaluation only."
+}
