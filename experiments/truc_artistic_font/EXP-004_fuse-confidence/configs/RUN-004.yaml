@@ -1,0 +1,21 @@
+# RUN-004 — FUSE (cấu hình suy luận; không train thêm)
+method: FUSE
+svtr: R3_lowlr + TTA          # SVTRv2-B0 fine-tune, checkpoint r3_lowlr_best.pth (Kaggle dataset trctrnthanh386/fuse-release)
+waterec: WATERec-RS           # HF Yesianrohn/WATERec-Models/WATERec-RS.pth
+delta: 0.15                   # chọn trên WordArt-Bench (dev), lưới [-0.5, 0.5] bước 0.05
+rule: "giống nhau -> giữ; khác -> WATERec nếu score_W + delta >= score_S, ngược lại SVTRv2"
+tta: {resize_ratio_neighbors: true, rotate_vertical_pm90: true, select: max_confidence}
+r3_training:
+  init: SVTRv2-B0 gốc (official_svtrv2_base/best.pth)
+  data: WATER-T 20k + WATER-R 50k + IIIT5K train x3 (md5-dedup với mọi tập test)
+  lr: 1.0e-5
+  epochs: 8
+  batch_per_gpu: 64
+  gpus: 2xT4
+  checkpoint_selection: WordArt-Bench (dev, 1485 nhãn hợp lệ)
+  seed: 0
+normalization: "lowercase + chỉ giữ [a-z0-9]"
+eval:
+  test: Union14M-Benchmark artistic (900)
+  control_regular_text: IIIT5K test (3000)
+  dev: WordArt-Bench (1511) — KHÔNG phải test

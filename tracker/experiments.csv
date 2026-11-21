@@ -2,4 +2,5 @@ experiment_id,run_id,owner,topic,status,method,baseline,dataset,split,seed,word_
 EXP-001,RUN-001,Danh,motion_blur,planned,,,,,,,,,,,,,,,
 EXP-002,RUN-002,Thúy,motion_blur,planned,,,,,,,,,,,,,,,
 EXP-003,RUN-003,Thư,artistic_font,planned,,,,,,,,,,,,,,,
-EXP-004,RUN-004,Trúc,artistic_font,planned,,,,,,,,,,,,,,,
+EXP-004,RUN-004,Trúc,artistic_font,completed,FUSE: R3_lowlr+TTA vs WATERec-RS theo confidence delta=0.15,SVTRv2-B0 official_svtrv2_base,Union14M-Benchmark artistic (test) + IIIT5K test (đối chứng); dev WordArt-Bench,union_art 900 / iiit5k_test 3000,0,79.22,83.33,+4.11,4.90,4.12,experiments/truc_artistic_font/EXP-004_fuse-confidence/kaggle_fuse_release_cell.py,experiments/truc_artistic_font/EXP-004_fuse-confidence/configs/RUN-004.yaml,https://www.kaggle.com/datasets/trctrnthanh386/fuse-release,2026-11-21,"CI95 [+2.11,+6.11]; sửa đúng 61 / làm sai thêm 24; IIIT5K 98.70->98.80; kết hợp mức đầu ra (không phải feature-level)"
+EXP-005,RUN-005,Trúc,artistic_font,no_improvement,GAC: glyph-anchored consistency loss (feature-level; stage cuối encoder; alpha=0.3),R3_lowlr (cùng recipe),Union14M-Benchmark artistic (test) + IIIT5K test; dev WordArt-Bench,union_art 900 / iiit5k_test 3000,0,78.44,78.11,-0.33,5.28,5.26,experiments/truc_artistic_font/EXP-005_gac-glyph-anchor/kaggle_gac_full_cell.py,,,2026-11-21,"CI95 [-1.22,+0.44] vs R3; IIIT5K 98.47->98.33"

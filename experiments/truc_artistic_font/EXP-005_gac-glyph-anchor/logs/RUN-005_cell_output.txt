@@ -1,0 +1,100 @@
+# Output của cell kaggle_gac_full_cell.py (Kaggle, 2xT4, 21/11/2026), chép từ notebook.
+# Gồm: train lại R3_lowlr (đối chứng) -> dự đoán R3, B0 -> train GAC@R3_lowlr (RUN-005) -> dự đoán -> báo cáo.
+# Đã bỏ các dòng thông báo widget tải file của HuggingFace.
+[   0.0m] Bắt đầu cell
+[   0.2m] GPU: 2 ['Tesla T4', 'Tesla T4']
+[   0.4m] Union ART num-samples = 900 | WordArt-Bench = 1511
+[   3.5m]   ghi /kaggle/working/art_pipeline/data/iiit5k_test: 3000 mẫu
+[   5.6m]   ghi /kaggle/working/art_pipeline/data/iiit_val: 200 mẫu
+[   5.6m]   ghi /kaggle/working/art_pipeline/data/iiit_train: 1800 mẫu
+[   5.6m]   ghi /kaggle/working/art_pipeline/data/wordart_dev: 1485 mẫu
+[   5.6m] md5 bị chặn (trùng tập test): 5411
+[   7.5m]   lấy 20500/20500 từ /tmp/water_raw/WATER-S/WATER-T (tổng 1000000)
+[   7.5m]   lấy 50500/50500 từ /tmp/water_raw/WATER-R (tổng 3225130)
+[   7.6m]   ghi /kaggle/working/art_pipeline/data/T20k_R50k/train: 75400 mẫu
+[   7.6m]   ghi /kaggle/working/art_pipeline/data/T20k_R50k/val: 1200 mẫu
+[   7.6m] Tập đánh giá: {'union_art': 900, 'wordart_bench': 1511, 'iiit5k_test': 3000}
+[   7.7m] [train] R3_lowlr | variant=base | recipe={'data': 'T20k_R50k', 'lr': 1e-05, 'freeze': 0, 'val': 'wordart'}
+[   7.8m]    openrec INFO: finetune from checkpoint official_svtrv2_base/best.pth
+[  10.6m]    epoch: [1/8], global_step: 500, lr: 0.000010, loss: 0.721125, ctc_loss: 3.189943, gtc_loss: 0.322786, avg_batch_cost: 0.2924
+[  10.8m]    cur metric, acc: 0.8680134621682595 (dev 1485) | best_epoch: 1
+[  11.5m]    cur metric, acc: 0.8666666608305276
+[  13.4m]    epoch: [2/8], global_step: 1000, loss: 0.677303
+[  13.5m]    cur metric, acc: 0.8673400614993936
+[  14.9m]    cur metric, acc: 0.8673400614993936
+[  16.1m]    epoch: [3/8], global_step: 1500, loss: 0.606755
+[  16.2m]    cur metric, acc: 0.8700336641748575 | best_epoch: 3
+[  18.3m]    cur metric, acc: 0.8693602635059915
+[  18.8m]    epoch: [4/8], global_step: 2000, loss: 0.587819
+[  18.9m]    cur metric, acc: 0.8700336641748575 | best_epoch: 4
+[  21.4m]    epoch: [4/8], global_step: 2500, loss: 0.615340
+[  21.5m]    cur metric, acc: 0.8680134621682595
+[  21.7m]    cur metric, acc: 0.8673400614993936
+[  24.1m]    epoch: [5/8], global_step: 3000, loss: 0.751287
+[  24.2m]    cur metric, acc: 0.8693602635059915
+[  25.1m]    cur metric, acc: 0.8707070648437235 | best_epoch: 5
+[  26.8m]    epoch: [6/8], global_step: 3500, loss: 0.552725
+[  27.0m]    cur metric, acc: 0.8713804655125895 | best_epoch: 6
+[  28.5m]    cur metric, acc: 0.8720538661814554 | best_epoch: 6
+[  29.6m]    epoch: [7/8], global_step: 4000, loss: 0.595736
+[  29.7m]    cur metric, acc: 0.8740740681880534 | best_epoch: 7
+[  31.8m]    cur metric, acc: 0.8720538661814554
+[  32.3m]    epoch: [8/8], global_step: 4500, loss: 0.600096
+[  32.4m]    cur metric, acc: 0.8734006675191874
+[  34.9m]    epoch: [8/8], global_step: 5000, loss: 0.602544
+[  35.0m]    cur metric, acc: 0.8727272668503214
+[  35.3m]    cur metric, acc: 0.8734006675191874
+[  35.3m]    best metric, acc: 0.8740740681880534, best_epoch: 7
+[  35.4m] [train] R3_lowlr xong sau 0.46 giờ
+[  35.7m]    [pred R3_lowlr] union_art: 900 ảnh, 23s | wordart_bench: 1511 ảnh, 42s | iiit5k_test: 3000 ảnh, 68s
+[  39.7m]    [pred B0_goc]   union_art: 900 ảnh, 22s | wordart_bench: 1511 ảnh, 40s | iiit5k_test: 3000 ảnh, 67s
+[  39.7m] [train] GAC@R3_lowlr | recipe={'data': 'T20k_R50k', 'lr': 1e-05, 'freeze': 0, 'val': 'wordart'} | α=0.3
+[  39.8m]    [GAC] mỏ neo = B0 đóng băng (official_svtrv2_base/best.pth), stage 2, 8 cột, alpha=0.3, font=['/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf']
+[  43.7m]    epoch: [1/8], global_step: 500, lr: 0.000010, loss: 0.677503, ctc_loss: 3.130936, gtc_loss: 0.335662, avg_batch_cost: 0.4182
+[  43.8m]    cur metric, acc: 0.8646464588239295 | best_epoch: 1
+[  44.8m]    cur metric, acc: 0.8680134621682595 | best_epoch: 1
+[  47.2m]    epoch: [2/8], global_step: 1000, loss: 0.720914, avg_batch_cost: 0.385
+[  47.3m]    cur metric, acc: 0.8673400614993936
+[  49.1m]    cur metric, acc: 0.8720538661814554 | best_epoch: 2
+[  50.7m]    epoch: [3/8], global_step: 1500, loss: 0.606256
+[  50.8m]    cur metric, acc: 0.8707070648437235
+[  53.4m]    cur metric, acc: 0.8713804655125895
+[  54.1m]    epoch: [4/8], global_step: 2000, loss: 0.571921
+[  54.3m]    cur metric, acc: 0.8707070648437235
+[  57.5m]    epoch: [4/8], global_step: 2500, loss: 0.613769
+[  57.6m]    cur metric, acc: 0.8686868628371255
+[  57.8m]    cur metric, acc: 0.8693602635059915
+[  60.9m]    epoch: [5/8], global_step: 3000, loss: 0.687068
+[  61.1m]    cur metric, acc: 0.8707070648437235
+[  62.1m]    cur metric, acc: 0.8720538661814554 | best_epoch: 5
+[  64.4m]    epoch: [6/8], global_step: 3500, loss: 0.531523
+[  64.5m]    cur metric, acc: 0.8740740681880534 | best_epoch: 6
+[  66.4m]    cur metric, acc: 0.8754208695257854 | best_epoch: 6
+[  67.9m]    epoch: [7/8], global_step: 4000, loss: 0.571143
+[  68.0m]    cur metric, acc: 0.8760942701946514 | best_epoch: 7
+[  70.8m]    cur metric, acc: 0.8734006675191874
+[  71.3m]    epoch: [8/8], global_step: 4500, loss: 0.667833
+[  71.5m]    cur metric, acc: 0.8727272668503214
+[  74.7m]    epoch: [8/8], global_step: 5000, loss: 0.668622
+[  74.8m]    cur metric, acc: 0.8760942701946514 | best_epoch: 8
+[  75.1m]    cur metric, acc: 0.8734006675191874
+[  75.1m]    best metric, acc: 0.8760942701946514, best_epoch: 8
+[  75.2m] [train] GAC@R3_lowlr xong sau 0.59 giờ
+[  77.3m]    [pred GAC@R3_lowlr] union_art: 900 ảnh, 22s | wordart_bench: 1511 ảnh, 40s | iiit5k_test: 3000 ảnh, 67s
+
+================ KẾT QUẢ (chuẩn hoá: lowercase + [a-z0-9]; CER = tổng edit / tổng ký tự GT) ================
+{'set': 'union_art', 'model': 'B0_goc', 'n': 900, 'acc': 79.2222, 'cer': 4.8971, 'gtc_acc': 79.6667}
+{'set': 'union_art', 'model': 'GAC@R3_lowlr', 'n': 900, 'acc': 78.1111, 'cer': 5.2591, 'gtc_acc': 78.6667}
+{'set': 'union_art', 'model': 'R3_lowlr', 'n': 900, 'acc': 78.4444, 'cer': 5.2782, 'gtc_acc': 79.0}
+{'set': 'wordart_bench', 'model': 'B0_goc', 'n': 1511, 'acc': 85.3739, 'cer': 4.6686, 'gtc_acc': 86.1681}
+{'set': 'wordart_bench', 'model': 'GAC@R3_lowlr', 'n': 1511, 'acc': 86.4328, 'cer': 4.5076, 'gtc_acc': 86.6314}
+{'set': 'wordart_bench', 'model': 'R3_lowlr', 'n': 1511, 'acc': 86.1681, 'cer': 4.4942, 'gtc_acc': 86.5652}
+{'set': 'iiit5k_test', 'model': 'B0_goc', 'n': 3000, 'acc': 98.7, 'cer': 0.3078, 'gtc_acc': 98.6333}
+{'set': 'iiit5k_test', 'model': 'GAC@R3_lowlr', 'n': 3000, 'acc': 98.3333, 'cer': 0.3864, 'gtc_acc': 98.0333}
+{'set': 'iiit5k_test', 'model': 'R3_lowlr', 'n': 3000, 'acc': 98.4667, 'cer': 0.3537, 'gtc_acc': 98.0}
+[union_art] GAC@R3_lowlr - B0_goc: Δacc -1.111 CI95[-2.556,+0.333] | ΔCER +0.362 CI95[+0.000,+0.733]
+[union_art] GAC@R3_lowlr - R3_lowlr: Δacc -0.333 CI95[-1.222,+0.444] | ΔCER -0.019 CI95[-0.224,+0.176]
+[wordart_bench] GAC@R3_lowlr - B0_goc: Δacc +1.059 CI95[+0.132,+2.052] | ΔCER -0.161 CI95[-0.466,+0.145]
+[wordart_bench] GAC@R3_lowlr - R3_lowlr: Δacc +0.265 CI95[-0.265,+0.794] | ΔCER +0.013 CI95[-0.135,+0.162]
+[iiit5k_test] GAC@R3_lowlr - B0_goc: Δacc -0.367 CI95[-0.667,-0.067] | ΔCER +0.079 CI95[+0.013,+0.144]
+[iiit5k_test] GAC@R3_lowlr - R3_lowlr: Δacc -0.133 CI95[-0.367,+0.100] | ΔCER +0.033 CI95[-0.020,+0.086]

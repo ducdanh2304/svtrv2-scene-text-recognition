@@ -1,0 +1,16 @@
+# RUN-005 — GAC@R3_lowlr (giống hệt RUN của R3_lowlr, chỉ thêm loss GAC)
+init: SVTRv2-B0 gốc (official_svtrv2_base/best.pth)
+base_config: OpenOCR-WATERec configs/rec/svtrv2/svtrv2_smtr_gtc_rctc.yml (Architecture/Loss lấy từ checkpoint B0)
+data: WATER-T 20k + WATER-R 50k + IIIT5K train x3 (md5-dedup với mọi tập test)
+lr: 1.0e-5
+scheduler: OneCycleLR (warmup 0.5 epoch)
+epochs: 8
+batch_per_gpu: 64
+gpus: 2xT4 (DDP, AMP)
+checkpoint_selection: WordArt-Bench (dev, 1485 nhãn hợp lệ), eval mỗi 500 bước
+seed: 0
+gac:
+  alpha: 0.3
+  anchor: B0 gốc đóng băng (không vào checkpoint), nhìn ảnh vẽ lại nhãn bằng LiberationSans-Regular, cùng HxW
+  feature: encoder.stages[2] (stage cuối), adaptive_avg_pool -> (1, 8 cột), chuẩn hoá L2 theo kênh
+  loss: alpha * mean(1 - cos)
