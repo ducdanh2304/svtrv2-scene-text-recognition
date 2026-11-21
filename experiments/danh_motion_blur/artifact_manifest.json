@@ -1,0 +1,19 @@
+{
+  "status": "checkpoint_urls_pending",
+  "openocr_commit": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "official_release_sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "s2_aug_latest": {
+    "source_sha256": "f7874600e9fe3cd666bccf7012a0b3a85f64f97d00fb1855c8085b7fddff39a8",
+    "url": null
+  },
+  "adapter_a123_latest": {
+    "source_sha256": "dc59b617ddc9d57454fcb64964b0a70bdc9bb4e844fb0eea9801e3c3f640c66f",
+    "url": null
+  },
+  "inference_exports": {
+    "b0_rctc_state.pt": null,
+    "s2_aug_state.pt": null,
+    "adapter_a123_state.pt": null
+  },
+  "notes": "Use inference/scripts/export_checkpoints.py; copy exported SHA256 from its manifest.json. Do not use pilot checkpoints."
+}

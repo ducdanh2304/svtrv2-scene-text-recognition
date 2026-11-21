@@ -1,0 +1,175 @@
+Global:
+  device: gpu
+  epoch_num: 12
+  log_smooth_window: 20
+  print_batch_step: 10
+  output_dir: /kaggle/working/s2_unionaug_2026_v1/S2_AUG
+  save_epoch_step:
+  - 0
+  - 1
+  eval_batch_step:
+  - 1000000000000
+  - 500
+  eval_epoch_step:
+  - 0
+  - 1
+  cal_metric_during_train: false
+  pretrained_model: /kaggle/working/s2_unionaug_2026_v1/s2_rctc_official_init.pth
+  checkpoints: null
+  use_tensorboard: false
+  infer_img: ./long_val/img
+  character_dict_path: ./tools/utils/EN_symbol_dict.txt
+  max_text_length: 25
+  use_space_char: false
+  save_res_path: ./output/rec/predicts_smtr.txt
+  use_amp: true
+  distributed: true
+  seed: 1234
+  accumulation_steps: 1
+Optimizer:
+  name: AdamW
+  lr: 0.0002
+  weight_decay: 0.05
+  filter_bias_and_bn: true
+LRScheduler:
+  name: OneCycleLR
+  warmup_epoch: 0.9
+  cycle_momentum: false
+Architecture:
+  model_type: rec
+  algorithm: SVTRv2
+  in_channels: 3
+  Transform: null
+  Encoder:
+    name: SVTRv2LNConvTwo33
+    use_pos_embed: false
+    out_channels: 256
+    dims:
+    - 64
+    - 128
+    - 256
+    depths:
+    - 3
+    - 6
+    - 3
+    num_heads:
+    - 2
+    - 4
+    - 8
+    mixer:
+    - - Conv
+      - Conv
+      - Conv
+    - - Conv
+      - Conv
+      - Conv
+      - FGlobal
+      - Global
+      - Global
+    - - Global
+      - Global
+      - Global
+    local_k:
+    - - 5
+      - 5
+    - - 5
+      - 5
+    - - -1
+      - -1
+    sub_k:
+    - - 1
+      - 1
+    - - 2
+      - 1
+    - - -1
+      - -1
+    last_stage: false
+    feat2d: true
+    patch_bias: false
+  Decoder:
+    name: RCTCDecoder
+Loss:
+  name: CTCLoss
+  zero_infinity: true
+PostProcess:
+  name: CTCLabelDecode
+Metric:
+  name: RecMetric
+  main_indicator: acc
+  is_filter: true
+Train:
+  dataset:
+    name: RatioDataSetTVResize
+    ds_width: true
+    padding: false
+    data_dir_list:
+    - /kaggle/working/s2_unionaug_2026_v1/train_root/part0
+    transforms:
+    - &id001
+      DecodeImagePIL:
+        img_mode: RGB
+    - PARSeqAugPIL: null
+    - MotionBlurAug:
+        p: 0.5
+        len_frac:
+        - 0.052941176470588235
+        - 0.3176470588235294
+        angle:
+        - -10.0
+        - 160.0
+    - &id002
+      CTCLabelEncode:
+        character_dict_path: /kaggle/working/s2_unionaug_2026_v1/OpenOCR/tools/utils/EN_symbol_dict.txt
+        use_space_char: false
+        max_text_length: 25
+    - &id003
+      KeepKeys:
+        keep_keys:
+        - image
+        - label
+        - length
+  sampler:
+    name: RatioSampler
+    scales:
+    - - 128
+      - 32
+    first_bs: 48
+    fix_bs: false
+    divided_factor:
+    - 4
+    - 16
+    is_training: true
+  loader:
+    shuffle: true
+    batch_size_per_card: 48
+    drop_last: true
+    max_ratio: 12
+    num_workers: 2
+Eval:
+  dataset:
+    name: RatioDataSetTVResize
+    ds_width: true
+    padding: false
+    data_dir_list:
+    - /kaggle/working/s2_unionaug_2026_v1/hf_eval/evaluation/IC13_857
+    transforms:
+    - *id001
+    - *id002
+    - *id003
+  sampler:
+    name: RatioSampler
+    scales:
+    - - 128
+      - 32
+    first_bs: 256
+    fix_bs: false
+    divided_factor:
+    - 4
+    - 16
+    is_training: false
+  loader:
+    shuffle: false
+    drop_last: false
+    batch_size_per_card: 128
+    max_ratio: 12
+    num_workers: 2

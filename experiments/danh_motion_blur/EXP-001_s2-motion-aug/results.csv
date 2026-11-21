@@ -1,0 +1,4 @@
+run_id,method,n,clean_accuracy,motion_mild_accuracy,motion_medium_accuracy,motion_severe_accuracy,motion_severe_cer,train_steps,notes
+REFERENCE,B0,3000,98.6,98.03333333333333,94.3,80.23333333333333,8.35353469173819,0,Official checkpoint; strict RCTC conversion
+CONTROL,S2_NOAUG,3000,97.93333300688887,97.59999967466666,93.56666635477777,78.46666640511111,,38304,Same budget as S2_AUG; only MotionBlurAug disabled; CER not recorded
+RUN-001,S2_AUG,3000,98.06666666666666,97.73333333333333,95.76666666666667,89.16666666666667,3.5707265937233834,38304,MotionBlurAug p=0.5; Stage2+Stage3+RCTC trainable
