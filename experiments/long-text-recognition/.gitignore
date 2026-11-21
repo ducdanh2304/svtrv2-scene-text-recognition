@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+.env.*
+*.log
+.ipynb_checkpoints/
+# Models and large or user-controlled artifacts
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.tar
+*.tar.gz
+*.tar.xz
+*.zip
+*.lmdb
+*.mdb
+*.db
+*.sqlite
+*.sqlite3
+checkpoint*/
+checkpoints/
+/results/
+runs/
+output/
+outputs/
+data/
+datasets/
+OpenOCR/
+vendor/
+# Colab / Google Drive artifacts
+SCOPE_V4_SPEED_JIT_RUN/
+SCOPE_FINAL_*/
+drive/
+# OS
+.DS_Store
+Thumbs.db
