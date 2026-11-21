@@ -20,4 +20,4 @@ Hướng **feature-level** can thiệp bên trong SVTRv2.
 
 **Quan sát thêm.** Fine-tune trên dữ liệu WATER tăng điểm WordArt-Bench (dev) nhưng giảm điểm Union ART (test) so với B0, ở cả R3 và GAC. Đây có thể là do lệch miền dữ liệu; chưa kiểm chứng.
 
-Code: `kaggle_gac_full_cell.py`. Config: `configs/RUN-005.yaml`. Log: `logs/RUN-005_cell_output.log`.
+Code: `kaggle_gac_full_cell.py`. Config: `configs/RUN-005.yaml`. Log: `logs/RUN-005_cell_output.txt`.

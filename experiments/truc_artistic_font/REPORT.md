@@ -44,7 +44,7 @@ Có cách nào cải thiện SVTRv2 trên **chữ nghệ thuật** mà không l�
 - **Config:** `EXP-004_fuse-confidence/configs/RUN-004.yaml` và `EXP-005_gac-glyph-anchor/configs/RUN-005.yaml`.
 - **Checkpoint/artifact:** https://www.kaggle.com/datasets/trctrnthanh386/fuse-release (checkpoint R3, config, dự đoán từng ảnh, `summary.csv`).
 - **Log:**
-  - **R3 và GAC:** `EXP-005_gac-glyph-anchor/logs/RUN-005_cell_output.log`. Đây là output của cell (train R3 đối chứng, train GAC, eval mỗi 500 bước, kết quả cuối), chép lại từ notebook, đã rút gọn các dòng metric trung gian. File `train.log` gốc đã mất khi phiên Kaggle khởi động lại.
+  - **R3 và GAC:** `EXP-005_gac-glyph-anchor/logs/RUN-005_cell_output.txt`. Đây là output của cell (train R3 đối chứng, train GAC, eval mỗi 500 bước, kết quả cuối), chép lại từ notebook, đã rút gọn các dòng metric trung gian. File `train.log` gốc đã mất khi phiên Kaggle khởi động lại.
   - **FUSE:** `summary.csv` và `preds/` trong artifact.
 - **Kết luận:**
   - **FUSE: có cải thiện.** +4.11 pp trên artistic, có ý nghĩa thống kê. Chữ thường giữ nguyên.
