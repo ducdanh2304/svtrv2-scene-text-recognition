@@ -1,0 +1,27 @@
+{
+  "status": "kaggle_unpacked_checkpoints_verified",
+  "openocr_commit": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "official_release_sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "s2_aug_latest": {
+    "source_sha256": "f7874600e9fe3cd666bccf7012a0b3a85f64f97d00fb1855c8085b7fddff39a8",
+    "url": "https://www.kaggle.com/datasets/cdanht2/checkpoint-svtrv2",
+    "note": "Kaggle extracted the original PyTorch ZIP; original .pth byte SHA cannot be rechecked from this dataset."
+  },
+  "adapter_a123_latest": {
+    "source_sha256": "dc59b617ddc9d57454fcb64964b0a70bdc9bb4e844fb0eea9801e3c3f640c66f",
+    "url": "https://www.kaggle.com/datasets/cdanht2/checkpoint-svtrv2",
+    "note": "Kaggle extracted the original PyTorch ZIP; original .pth byte SHA cannot be rechecked from this dataset."
+  },
+  "kaggle_dataset_version_1": {
+    "url": "https://www.kaggle.com/datasets/cdanht2/checkpoint-svtrv2",
+    "download_sha256": "8ce9695098867e17112ca158cc9f86f627a6b8e5dff863e93860bb8ce0e5ceff",
+    "s2_inner_content_sha256": "95f971e948716b061c76b7e682cf1567cd1b64777ef0d4713f9b317b7d4adfca",
+    "adapter_inner_content_sha256": "dfd8e6d46a6621f51dc5318e59c783b669d512f6e7ccb9edbc37d5c18a08195a"
+  },
+  "inference_exports": {
+    "b0_rctc_state.pt": "3ec59b8b81ec84d2abf07b3156cb771949c7e255d7acd40563028b1414abc611",
+    "s2_aug_state.pt": "3b98ad3307291b0ded8ba6ae5dab13ddb93e60cd06eb063237024ef3cc3bfe75",
+    "adapter_a123_state.pt": "316d2a04c9b24c3697cf9e5dfdcb86bf449b05a8791041b084bb6da32c5e7a69"
+  },
+  "notes": "Use inference/scripts/export_checkpoints.py --kaggle-bundle; it verifies dataset bundle and every inner checkpoint entry, then strict-loads both final models. No pilot checkpoints."
+}

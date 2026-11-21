@@ -1,0 +1,99 @@
+{
+  "openocr_commit": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "source_friend": "aug-svtrv2.ipynb",
+  "source_friend_sha": "dde0aa93d38f47579713451979f9f1a74dc3cb5873658209bcedc62be63ffce7",
+  "official_checkpoint_sha": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "official_config_sha": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+  "converted_s2_sha": "52f27066e3ab65232b450b16c579d415518f24e2d6b8df2a897bf9367ce03ca3",
+  "train_dirs": [
+    "/kaggle/working/s2_unionaug_2026_v1/train_root/part0"
+  ],
+  "train_lmdb_sha": [
+    "faea34463986fa2bc3a14d61f7f0791b0cc09cc0125c198b53b25c6bef2d2152"
+  ],
+  "blur_manifest_sha": "25587b0f26e30bb7df8a4ef1c319bbd3e2139c9af9eea5860e56d3784e7ef3cc",
+  "baseline_matches_friend": true,
+  "augmentation": {
+    "MotionBlurAug": {
+      "p": 0.5,
+      "len_frac": [
+        0.052941176470588235,
+        0.3176470588235294
+      ],
+      "angle": [
+        -10.0,
+        160.0
+      ]
+    }
+  },
+  "motion_aug_sha": "67bebc34eb0353070ba7500037e5b406f69dc5906a8c4a4d5a14911292617173",
+  "training": {
+    "S2_NOAUG": {
+      "epoch": 12,
+      "global_step": 38304,
+      "checkpoint_sha": "a4bd99292f36025398c98ef488cb3e848de4d35dca270c4bec1397e7661cc4fe",
+      "smoke": {
+        "trainable_params": 4823647,
+        "batch_shape": [
+          48,
+          3,
+          64,
+          64
+        ],
+        "loss": 1.7787383794784546,
+        "stage2_gradient": true,
+        "stage3_gradient": true,
+        "decoder_gradient": true,
+        "stage1_gradient": false
+      }
+    },
+    "S2_AUG": {
+      "epoch": 12,
+      "global_step": 38304,
+      "checkpoint_sha": "f7874600e9fe3cd666bccf7012a0b3a85f64f97d00fb1855c8085b7fddff39a8",
+      "smoke": {
+        "trainable_params": 4823647,
+        "batch_shape": [
+          48,
+          3,
+          64,
+          64
+        ],
+        "loss": 4.623902797698975,
+        "stage2_gradient": true,
+        "stage3_gradient": true,
+        "decoder_gradient": true,
+        "stage1_gradient": false
+      }
+    }
+  },
+  "results": {
+    "clean": {
+      "B0_official": 98.59999967133332,
+      "S2_NOAUG": 97.93333300688887,
+      "S2_AUG": 98.06666633977777
+    },
+    "motion_mild": {
+      "B0_official": 98.03333300655555,
+      "S2_NOAUG": 97.59999967466666,
+      "S2_AUG": 97.73333300755554
+    },
+    "motion_medium": {
+      "B0_official": 94.29999968566666,
+      "S2_NOAUG": 93.56666635477777,
+      "S2_AUG": 95.76666634744444
+    },
+    "motion_severe": {
+      "B0_official": 80.23333306588889,
+      "S2_NOAUG": 78.46666640511111,
+      "S2_AUG": 89.16666636944444
+    }
+  },
+  "limitations": [
+    "test manifest used to set blur range",
+    "MotionBlurAug from supplied notebook seeds RNG from worker PID/time; exact replay is not guaranteed",
+    "Official CTC label/loss replaces canonicalized pilot S2 loss; compare AUG vs NOAUG internally",
+    "IIIT5K test previously inspected",
+    "Union14M content overlap with IIIT5K not exhaustively checked"
+  ]
+}

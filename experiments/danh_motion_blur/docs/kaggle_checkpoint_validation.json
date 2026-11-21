@@ -1,0 +1,37 @@
+{
+  "dataset_url": "https://www.kaggle.com/datasets/cdanht2/checkpoint-svtrv2",
+  "dataset_version": 1,
+  "download_sha256": "8ce9695098867e17112ca158cc9f86f627a6b8e5dff863e93860bb8ce0e5ceff",
+  "checkpoint_inner_content": {
+    "s2_latest": {
+      "members": 570,
+      "content_sha256": "95f971e948716b061c76b7e682cf1567cd1b64777ef0d4713f9b317b7d4adfca"
+    },
+    "a123_latest": {
+      "members": 102,
+      "content_sha256": "dfd8e6d46a6621f51dc5318e59c783b669d512f6e7ccb9edbc37d5c18a08195a"
+    }
+  },
+  "checkpoint_metadata": {
+    "s2_latest": {
+      "epoch": 12,
+      "global_step": 38304,
+      "state_dict_tensors": 180
+    },
+    "a123_latest": {
+      "epoch": 12,
+      "placements": "1+2+3",
+      "adapter_tensors": 24,
+      "adapter_parameters": 79648,
+      "init_sha": "52f27066e3ab65232b450b16c579d415518f24e2d6b8df2a897bf9367ce03ca3"
+    }
+  },
+  "strict_model_load": "passed for B0, S2_AUG, and A1+A2+A3",
+  "crop_forward_smoke": "passed for all three variants on 160x44 synthetic HELLO, clean and horizontal 9-pixel motion blur",
+  "export_sha256": {
+    "b0_rctc": "3ec59b8b81ec84d2abf07b3156cb771949c7e255d7acd40563028b1414abc611",
+    "s2_aug": "3b98ad3307291b0ded8ba6ae5dab13ddb93e60cd06eb063237024ef3cc3bfe75",
+    "adapter_a123": "316d2a04c9b24c3697cf9e5dfdcb86bf449b05a8791041b084bb6da32c5e7a69"
+  },
+  "limitation": "Kaggle auto-extracted the two original PyTorch ZIP archives. The original .pth file SHA256 values recorded in earlier audits cannot be recalculated from this dataset. Bundle and every inner archive entry are hashed; this smoke does not independently reproduce IIIT5K accuracy."
+}

@@ -1,0 +1,281 @@
+{
+  "openocr_commit": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "official_checkpoint_sha": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "official_config_sha": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+  "s2_initial_sha": "52f27066e3ab65232b450b16c579d415518f24e2d6b8df2a897bf9367ce03ca3",
+  "s2_aug_reference_sha": "f7874600e9fe3cd666bccf7012a0b3a85f64f97d00fb1855c8085b7fddff39a8",
+  "train_lmdb_sha": [
+    "faea34463986fa2bc3a14d61f7f0791b0cc09cc0125c198b53b25c6bef2d2152"
+  ],
+  "train_n": 144677,
+  "train_aug": {
+    "MotionBlurAug": {
+      "p": 0.5,
+      "len_frac": [
+        0.052941176470588235,
+        0.3176470588235294
+      ],
+      "angle": [
+        -10.0,
+        160.0
+      ]
+    }
+  },
+  "pilot_epochs": 2,
+  "final_epochs": 12,
+  "pilot_grid": [
+    "1",
+    "2",
+    "3",
+    "1+2",
+    "1+3",
+    "2+3",
+    "1+2+3"
+  ],
+  "selected_on_ic13": [
+    "1+2",
+    "1+2+3"
+  ],
+  "smoke": {
+    "1": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 5.603120803833008,
+      "trainable": 9376,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    },
+    "2": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 6.524371147155762,
+      "trainable": 35136,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    },
+    "3": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 6.840197563171387,
+      "trainable": 35136,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    },
+    "1+2": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 7.070756435394287,
+      "trainable": 44512,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    },
+    "1+3": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 6.900615692138672,
+      "trainable": 44512,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    },
+    "2+3": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 4.5388383865356445,
+      "trainable": 70272,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    },
+    "1+2+3": {
+      "shapes": {
+        "1": [
+          48,
+          128,
+          16,
+          16
+        ],
+        "2": [
+          48,
+          128,
+          256
+        ],
+        "3": [
+          48,
+          128,
+          256
+        ]
+      },
+      "loss": 5.195318222045898,
+      "trainable": 79648,
+      "base_frozen": true,
+      "identity_at_init": true,
+      "gradient_ok": true,
+      "input_shape": [
+        48,
+        3,
+        64,
+        64
+      ]
+    }
+  },
+  "final": {
+    "1+2": {
+      "checkpoint_sha": "c52351b3824b733a411d5b9d7fa2374b9ce0728473ab196eda2c4aaa284499df",
+      "validation": {
+        "clean": 98.13302217036173,
+        "motion": 87.74795799299883
+      }
+    },
+    "1+2+3": {
+      "checkpoint_sha": "dc59b617ddc9d57454fcb64964b0a70bdc9bb4e844fb0eea9801e3c3f640c66f",
+      "validation": {
+        "clean": 98.01633605600934,
+        "motion": 88.44807467911319
+      }
+    }
+  },
+  "limitations": [
+    "Blur range derived from previously inspected IIIT5K protocol",
+    "Union14M/IIIT5K content overlap not exhaustively audited",
+    "MotionBlurAug RNG from worker PID/time",
+    "IC13 validation synthetic motion is not an independent real-world blur set",
+    "Adapter is a project-specific design, not paper reproduction"
+  ]
+}

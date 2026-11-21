@@ -1,0 +1,4 @@
+run_id,method,n,clean_accuracy,motion_mild_accuracy,motion_medium_accuracy,motion_severe_accuracy,motion_severe_cer,train_steps,notes
+REFERENCE,B0,3000,98.6,98.03333333333333,94.3,80.23333333333333,8.35353469173819,0,Same official checkpoint
+RUN-006,A1+2+3,3000,98.43333333333332,97.89999999999999,94.5,84.2,5.8376465963441,38304,"Adapter-only 79,648 params; B0 frozen"
+CONTROL,S2_AUG,3000,98.06666666666666,97.73333333333333,95.76666666666667,89.16666666666667,3.5707265937233834,38304,Strong feature-level reference; different trainable parameter count
