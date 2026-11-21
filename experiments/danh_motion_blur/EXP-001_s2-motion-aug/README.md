@@ -12,7 +12,7 @@
 | S2_NOAUG | 97,93% | 97,60% | 93,57% | 78,47% | Chưa đo |
 | **S2_AUG** | 98,07% | 97,73% | 95,77% | **89,17%** | **3,57%** |
 
-Tất cả đo trên **cùng 3.000 ảnh IIIT5K test mỗi điều kiện**, word accuracy/CER theo `RecMetric` OpenOCR. S2_AUG hơn B0 **8,93 điểm %** blur nặng; hơn S2_NOAUG **10,70 điểm %**. Số sửa đúng/làm sai thêm so với B0, tính từ lượt đánh giá mới có cùng thứ tự ảnh: **299/31** ở blur nặng. Bảng chi tiết ở [results.csv](results.csv). Dải augmentation được đặt dựa trên manifest blur của nhóm, nên test này phản ánh protocol đã biết; cần tập mới để khẳng định tổng quát.
+Tất cả đo trên **cùng 3.000 ảnh IIIT5K test mỗi điều kiện**, word accuracy/CER theo `RecMetric` OpenOCR. S2_AUG hơn B0 **8,93 điểm %** blur nặng; hơn S2_NOAUG **10,70 điểm %**. Số sửa đúng/làm sai thêm so với B0, tính từ lượt đánh giá mới có cùng thứ tự ảnh: **299/31** ở blur nặng; [bảng audit tổng hợp](../evidence/) ghi kết quả đối chiếu. Bảng chi tiết ở [results.csv](results.csv). Dải augmentation được đặt dựa trên manifest blur của nhóm, nên test này phản ánh protocol đã biết; cần tập mới để khẳng định tổng quát.
 
 **Source/config:** [script S2](code/s2_train_pair.py), [MotionBlurAug](code/motion_blur_aug.py), [config RUN-001](configs/RUN-001.yml) và [notebook Kaggle đầy đủ](code/Danh_S2_Union14M_MotionAug_2T4.ipynb). Config ghi lại đường dẫn Kaggle gốc; đổi đường dẫn dữ liệu/checkpoint trên máy khác. Notebook kiểm SHA release, số mẫu, gradient vùng được train, baseline và xuất audit. Khi chạy riêng script S2, đặt OpenOCR tại `EXP-001_s2-motion-aug/OpenOCR` như đường dẫn import trong script; trước khi train, cần [đăng ký augmentation vào OpenOCR](code/install_motion_blur.py).
 

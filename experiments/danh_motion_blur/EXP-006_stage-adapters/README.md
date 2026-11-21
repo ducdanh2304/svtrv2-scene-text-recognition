@@ -13,7 +13,7 @@
 | **A1+A2+A3** | 98,43% | 97,90% | 94,50% | **84,20%** | **5,84%** |
 | S2_AUG tham chiếu | 98,07% | 97,73% | 95,77% | 89,17% | 3,57% |
 
-Trên blur nặng, A1+A2+A3 hơn B0 **3,97 điểm %**, sửa đúng/làm sai thêm **149/30 ảnh**, nhưng kém S2_AUG **4,97 điểm %**. Gắn thêm A3 chỉ hơn A1+A2 0,27 điểm % blur nặng và giảm ảnh gốc 0,17 điểm %. Vì vậy adapter có tín hiệu hữu ích nhưng không thắng nhánh S2. [results.csv](results.csv) là bảng máy đọc.
+Trên blur nặng, A1+A2+A3 hơn B0 **3,97 điểm %**, sửa đúng/làm sai thêm **149/30 ảnh**, nhưng kém S2_AUG **4,97 điểm %**. Gắn thêm A3 chỉ hơn A1+A2 0,27 điểm % blur nặng và giảm ảnh gốc 0,17 điểm %. Vì vậy adapter có tín hiệu hữu ích nhưng không thắng nhánh S2. [results.csv](results.csv) là bảng máy đọc; [bảng audit tổng hợp](../evidence/) ghi kết quả đối chiếu.
 
 **Source/config:** [worker train/eval](code/adapter_grid_trial.py), [config RUN-006](configs/RUN-006.yml), [notebook Kaggle](code/Danh_Stage_Adapter_Grid_2T4.ipynb). Script kiểm shape từng Stage, identity lúc khởi tạo, gradient chỉ ở adapter, loss hữu hạn và thứ tự nhãn trước khi đếm sửa đúng/làm sai. Config chứa đường dẫn Kaggle gốc; notebook là quy trình chuẩn bị dữ liệu/validation đầy đủ.
 

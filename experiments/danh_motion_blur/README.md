@@ -8,7 +8,7 @@ Phần bàn giao feature-level của Danh gồm hai thí nghiệm và một giao
 | [EXP-001 S2_AUG](EXP-001_s2-motion-aug/) | Train Stage 2 + Stage 3 + RCTC | 98,07% | **89,17%** | 3,57% |
 | [EXP-006 A1+A2+A3](EXP-006_stage-adapters/) | Khóa B0, train adapter sau ba Stage | 98,43% | 84,20% | 5,84% |
 
-Các số dùng cùng 3.000 ảnh IIIT5K mỗi điều kiện, chuẩn hóa `RecMetric` của OpenOCR. [Inference API](inference/) nhận **crop chữ** dạng PIL RGB và trả về text/confidence, để Thúy nối vào pipeline end to end. [Sơ đồ](docs/pipeline_adapter_grid.png) và [báo cáo ngắn](docs/report.pdf) giải thích vị trí module, kết quả và thời gian T4.
+Các số dùng cùng 3.000 ảnh IIIT5K mỗi điều kiện, chuẩn hóa `RecMetric` của OpenOCR. [Bảng tổng hợp và audit](evidence/) ghi accuracy, CER, số ảnh sửa đúng/làm sai thêm và cấu hình chạy; dữ liệu dự đoán từng ảnh không được công bố trong repo. [Inference API](inference/) nhận **crop chữ** dạng PIL RGB và trả về text/confidence, để Thúy nối vào pipeline end to end. [Sơ đồ](docs/pipeline_adapter_grid.png) và [báo cáo ngắn](docs/report.pdf) giải thích vị trí module, kết quả và thời gian T4.
 
 Checkpoint nguồn đã được audit bằng SHA256:
 
