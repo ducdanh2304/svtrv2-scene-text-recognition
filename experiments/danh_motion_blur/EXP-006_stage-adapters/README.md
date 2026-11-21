@@ -17,6 +17,6 @@ Trên blur nặng, A1+A2+A3 hơn B0 **3,97 điểm %**, sửa đúng/làm sai th
 
 **Source/config:** [worker train/eval](code/adapter_grid_trial.py), [config RUN-006](configs/RUN-006.yml), [notebook Kaggle](code/Danh_Stage_Adapter_Grid_2T4.ipynb). Script kiểm shape từng Stage, identity lúc khởi tạo, gradient chỉ ở adapter, loss hữu hạn và thứ tự nhãn trước khi đếm sửa đúng/làm sai. Config chứa đường dẫn Kaggle gốc; notebook là quy trình chuẩn bị dữ liệu/validation đầy đủ.
 
-**Checkpoint:** `final/1+2+3/latest.pth`, SHA256 `dc59b617ddc9d57454fcb64964b0a70bdc9bb4e844fb0eea9801e3c3f640c66f`. **Link tải chưa được cung cấp**, cần điền ở [manifest chung](../artifact_manifest.json). Khi có file, [script export](../inference/scripts/export_checkpoints.py) tạo `adapter_a123_state.pt`; API ở [inference/](../inference/).
+**Checkpoint:** `final/1+2+3/latest.pth`, SHA256 gốc từ audit `dc59b617ddc9d57454fcb64964b0a70bdc9bb4e844fb0eea9801e3c3f640c66f`. [Kaggle Dataset version 1](https://www.kaggle.com/datasets/cdanht2/checkpoint-svtrv2) chứa checkpoint dưới dạng thư mục đã bung, nên không thể kiểm lại SHA file gốc; [manifest chung](../artifact_manifest.json) ghi SHA của bundle và toàn bộ nội dung checkpoint. [Script export](../inference/scripts/export_checkpoints.py) đã strict-load epoch 12/tổ hợp `1+2+3` và tạo `adapter_a123_state.pt`; API ở [inference/](../inference/).
 
 Giới hạn: một seed cho model cuối; pilot chọn trên IC13 blur tổng hợp, IIIT5K đã được xem nhiều lần, dải augmentation có tham chiếu protocol test. Khoảng cách feature không thay cho accuracy/CER OCR.
