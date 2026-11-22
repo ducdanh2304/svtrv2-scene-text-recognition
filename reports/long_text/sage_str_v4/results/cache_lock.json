@@ -1,0 +1,7 @@
+{
+  "checkpoint_sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "config_sha256": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+  "dataset_revision": "d59c13643f1d7f92831625fe161e2c19ec3d7f52",
+  "adapter_sha256": "d642f96944bd1512b7acdf723404cfb1fb2879d07487da0857b9c810ea23ea61",
+  "selector_sha256": "c941f81ad0cdafdf49eb90d22f32d78ec50c9fab2f8c5f240771419a643f19fe"
+}

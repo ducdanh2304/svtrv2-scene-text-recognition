@@ -1,0 +1,5 @@
+test,control,bucket,n,rescued,regressed,net,mcnemar_exact_p
+safe_scope,original_svtrv2_full12,26-35,3376,569,60,509,5.465793509852232e-105
+safe_scope,original_svtrv2_full12,36-55,1147,444,5,439,2.0692049785288115e-124
+safe_scope,original_svtrv2_full12,56+,266,119,0,119,3.009265538105056e-36
+safe_scope,original_svtrv2_full12,Overall,4789,1132,65,1067,2.4263371250460996e-252

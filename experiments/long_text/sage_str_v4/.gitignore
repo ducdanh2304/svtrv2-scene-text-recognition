@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+OpenOCR/
+SAGE_STR_V4_GPU_RESULTS/
+SAGE_STR_V4_GPU_RESULTS.zip
+*.tar
+*.tar.xz
+*.mdb
+*.pth
+*.pt
+*.ckpt
+*.onnx
+.cache/

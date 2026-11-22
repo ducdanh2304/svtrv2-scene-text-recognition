@@ -1,0 +1,13 @@
+{
+  "OpenOCR_revision": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "checkpoint_sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "config_sha256": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+  "classes": 95,
+  "model": "SVTRv2-T",
+  "source_stitch": "LTB.ipynb G2",
+  "experiment": "external matched baseline-vs-unified, frozen parameters and GT-blind inference",
+  "source_preproc": "LTB.ipynb cell 12",
+  "legacy_window_ratio": 6.0,
+  "legacy_overlap": 0.5,
+  "test_protocol": "Exploratory reused LTB; all candidates predeclared, no candidate selected from test for independent claim"
+}

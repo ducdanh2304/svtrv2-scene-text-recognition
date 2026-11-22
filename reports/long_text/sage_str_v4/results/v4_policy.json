@@ -1,0 +1,104 @@
+{
+  "version": "SAGE-STR-v4-contextual-experimental",
+  "seed": 20261118,
+  "thresholds": {
+    "orientation": 0.65,
+    "recovery": -0.1
+  },
+  "audit": {
+    "passed": true,
+    "n": 306,
+    "summary": {
+      "wins": 20,
+      "harms": 2,
+      "edit_gain": 366,
+      "promoted": 45,
+      "n": 306
+    },
+    "by_source": {
+      "LTB": {
+        "wins": 12,
+        "harms": 2,
+        "edit_gain": 348,
+        "promoted": 37,
+        "n": 168
+      },
+      "u14m/multi_oriented": {
+        "wins": 6,
+        "harms": 0,
+        "edit_gain": 13,
+        "promoted": 6,
+        "n": 45
+      },
+      "u14m/multi_words": {
+        "wins": 2,
+        "harms": 0,
+        "edit_gain": 5,
+        "promoted": 2,
+        "n": 28
+      },
+      "evaluation/IIIT5k": {
+        "wins": 0,
+        "harms": 0,
+        "edit_gain": 0,
+        "promoted": 0,
+        "n": 25
+      },
+      "evaluation/CUTE80": {
+        "wins": 0,
+        "harms": 0,
+        "edit_gain": 0,
+        "promoted": 0,
+        "n": 40
+      }
+    },
+    "note": "Development audit; no OOD guarantee or conformal claim"
+  },
+  "calibration_temps": {
+    "orientation": 1.5898403775692607,
+    "recovery": 0.672556085538462
+  },
+  "features": [
+    "strategy",
+    "aspect_log",
+    "original_len",
+    "original_slot_pressure",
+    "original_entropy",
+    "original_edge_occupancy",
+    "reference_len",
+    "reference_is_geometry",
+    "candidate_len",
+    "relative_len_change",
+    "candidate_n_windows",
+    "candidate_log_distortion",
+    "candidate_overlap_agreement",
+    "candidate_entropy",
+    "candidate_confidence",
+    "candidate_char_margin",
+    "sequence_agreement",
+    "candidate_longer_than_ref",
+    "length_ratio",
+    "reference_confidence",
+    "reference_char_margin",
+    "confidence_diff_to_reference",
+    "entropy_diff_to_reference",
+    "margin_diff_to_reference",
+    "confidence_diff_to_original",
+    "ref_original_agreement",
+    "reference_len_minus_original_len",
+    "reference_vs_original_length_ratio",
+    "candidate_len_minus_original_len",
+    "candidate_original_agreement",
+    "rival_orientation_available",
+    "rival_orientation_agreement",
+    "rival_orientation_conf_gap",
+    "rival_orientation_len_gap",
+    "rotation_confidence_rank",
+    "reference_is_truncated_vs_candidate",
+    "n_available_alternatives"
+  ],
+  "cost": "fixed token units, not GPU timings",
+  "training_classes": "mutually exclusive neutral/gain/harm",
+  "reference": "geometry_v3 when available, otherwise original",
+  "risk_note": "No guarantee on unseen distributions"
+}

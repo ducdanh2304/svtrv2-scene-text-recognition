@@ -1,0 +1,203 @@
+{
+  "experiment": "SCOPE_V4_PREFIX_BEAM_JIT_PARITY_LOCKED",
+  "source_checkpoint_sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "source_config_sha256": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+  "openocr_commit": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "policy_version": "SCOPE_FINAL_COVERAGE_PROBE_V3_LOCKED_20261121",
+  "raw_dense_threshold": 16,
+  "coverage_min_extra": 3,
+  "coverage_relative_gain": 0.5,
+  "jit_forward": {
+    "available": true,
+    "status": "jit_exact_recurrence_parity_pass"
+  },
+  "jit_alignment": {
+    "available": true,
+    "status": "forced_alignment_parity_pass"
+  },
+  "beam_jit": {
+    "status": "numba_prefix_beam_parity_pass",
+    "available": true
+  },
+  "beam_jit_audit": {
+    "audit_checked": 128,
+    "audit_remaining": 0,
+    "tie_fallbacks": 79,
+    "active": true
+  },
+  "beam_jit_microbench": {
+    "original_ms": 10.478146520003975,
+    "fast_ms": 0.8247234999998909,
+    "ratio": 12.705041774613383,
+    "auditing_paused_during_microbenchmark": true
+  },
+  "beam_jit_sha256": "07795f1b53cc001eb6c7fd4907c1b2fb5b608b85e8e7914540d4d2caf0c68d98",
+  "model_lock": "6ec3c0d0b24cab63087a3017209474604a3f223d6b4da86ceddbd309333c0426",
+  "ltb_lock": "8a7e4ec0f43acf0cb112ae0fcd21952994d1ba5849dfdc8821de3cd9fe14d621",
+  "labels_in_inference": false,
+  "no_dataset_id_in_inference": true,
+  "method": "safe_scope",
+  "baseline": "original_svtrv2_full12",
+  "important_limitation": "Coverage policy and E7 were developed after examining LTB and external benchmarks: this repeat is NOT independent test evidence.",
+  "no_per_sample_regression_guarantee": true,
+  "historical_e7_activated_row_parity": true,
+  "historical_e7_activated_rows": 4696,
+  "external_dataset_status": [
+    {
+      "family": "Common",
+      "dataset": "IIIT5K",
+      "planned": 3000,
+      "scored": 3000,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Common",
+      "dataset": "SVT",
+      "planned": 647,
+      "scored": 647,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Common",
+      "dataset": "IC13-857",
+      "planned": 857,
+      "scored": 857,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Common",
+      "dataset": "IC15-1811",
+      "planned": 1811,
+      "scored": 1811,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Common",
+      "dataset": "SVTP",
+      "planned": 645,
+      "scored": 645,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Common",
+      "dataset": "CUTE80",
+      "planned": 288,
+      "scored": 287,
+      "inference_failures": 0,
+      "excluded_total": 1,
+      "sample_kind": "FULL",
+      "status": "PARTIAL_WITH_EXCLUSIONS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "Curve",
+      "planned": 2426,
+      "scored": 2426,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "Multi-Oriented",
+      "planned": 1369,
+      "scored": 1369,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "Artistic",
+      "planned": 900,
+      "scored": 898,
+      "inference_failures": 0,
+      "excluded_total": 2,
+      "sample_kind": "FULL",
+      "status": "PARTIAL_WITH_EXCLUSIONS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "Contextless",
+      "planned": 779,
+      "scored": 779,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "Salient",
+      "planned": 1585,
+      "scored": 1585,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "Multi-Words",
+      "planned": 829,
+      "scored": 829,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "OST",
+      "dataset": "Weak",
+      "planned": 2416,
+      "scored": 2416,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "OST",
+      "dataset": "Heavy",
+      "planned": 2416,
+      "scored": 2416,
+      "inference_failures": 0,
+      "excluded_total": 0,
+      "sample_kind": "FULL",
+      "status": "PASS"
+    },
+    {
+      "family": "Union14M",
+      "dataset": "General",
+      "planned": 2000,
+      "scored": 1938,
+      "inference_failures": 0,
+      "excluded_total": 62,
+      "sample_kind": "DETERMINISTIC_SUBSET_NOT_FULL_BENCHMARK",
+      "status": "PARTIAL_WITH_EXCLUSIONS"
+    }
+  ],
+  "all_datasets_scored": true,
+  "all_inference_error_free": true,
+  "general_mode": "sample",
+  "general_sample_n": 2000,
+  "general_not_full_benchmark": true,
+  "full_ltb_n": 4789
+}

@@ -1,0 +1,21 @@
+{
+  "model": "frozen official SVTRv2-T",
+  "openocr_rev": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+  "checkpoint_sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6",
+  "config_sha256": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+  "dataset_revision": "d59c13643f1d7f92831625fe161e2c19ec3d7f52",
+  "v4_code_sha256": "f5ff65b03239c56cd2a7fb5ab39262bde8e10ee86dc25116e9713cf6f94e1c55",
+  "split_salt": "cs406-sage-v4-locked-splits-v1",
+  "split_sizes": {
+    "train": 1003,
+    "calibration": 230,
+    "tune": 224,
+    "audit": 306,
+    "eval": 461
+  },
+  "inference_rows": 2224,
+  "eval_rows": 461,
+  "v4_audit_passed": true,
+  "v3_audit_passed": true,
+  "historical_benchmarks_used_for_development": true
+}

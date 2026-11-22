@@ -1,0 +1,26 @@
+split,dataset,comparison,win,loss,net,McNemar_exact_p
+eval,LTB,SAGE_v4 vs SVTRv2-T_single,53,6,47,1.7539187463500028e-10
+eval,LTB,SAGE_v4 vs SVTRv2-T_v3,12,2,10,0.012939453125
+eval,LTB,SAGE_v4 vs Unified_v1,4,1,3,0.375
+eval,LTB,SAGE_v4 vs Safe_reference,12,2,10,0.012939453125
+eval,LTB,SAGE_v4 vs SAGE_v3_locked,0,0,0,1.0
+eval,u14m/multi_oriented,SAGE_v4 vs SVTRv2-T_single,8,0,8,0.0078125
+eval,u14m/multi_oriented,SAGE_v4 vs SVTRv2-T_v3,8,0,8,0.0078125
+eval,u14m/multi_oriented,SAGE_v4 vs Unified_v1,4,1,3,0.375
+eval,u14m/multi_oriented,SAGE_v4 vs Safe_reference,8,0,8,0.0078125
+eval,u14m/multi_oriented,SAGE_v4 vs SAGE_v3_locked,2,1,1,1.0
+eval,u14m/multi_words,SAGE_v4 vs SVTRv2-T_single,2,0,2,0.5
+eval,u14m/multi_words,SAGE_v4 vs SVTRv2-T_v3,2,0,2,0.5
+eval,u14m/multi_words,SAGE_v4 vs Unified_v1,6,1,5,0.125
+eval,u14m/multi_words,SAGE_v4 vs Safe_reference,2,0,2,0.5
+eval,u14m/multi_words,SAGE_v4 vs SAGE_v3_locked,1,0,1,1.0
+eval,evaluation/IIIT5k,SAGE_v4 vs SVTRv2-T_single,0,0,0,1.0
+eval,evaluation/IIIT5k,SAGE_v4 vs SVTRv2-T_v3,0,0,0,1.0
+eval,evaluation/IIIT5k,SAGE_v4 vs Unified_v1,8,0,8,0.0078125
+eval,evaluation/IIIT5k,SAGE_v4 vs Safe_reference,0,0,0,1.0
+eval,evaluation/IIIT5k,SAGE_v4 vs SAGE_v3_locked,0,0,0,1.0
+eval,evaluation/CUTE80,SAGE_v4 vs SVTRv2-T_single,2,0,2,0.5
+eval,evaluation/CUTE80,SAGE_v4 vs SVTRv2-T_v3,2,0,2,0.5
+eval,evaluation/CUTE80,SAGE_v4 vs Unified_v1,20,0,20,1.9073486328125e-06
+eval,evaluation/CUTE80,SAGE_v4 vs Safe_reference,2,0,2,0.5
+eval,evaluation/CUTE80,SAGE_v4 vs SAGE_v3_locked,1,0,1,1.0

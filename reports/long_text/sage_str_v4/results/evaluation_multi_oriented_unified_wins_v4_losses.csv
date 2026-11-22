@@ -1,0 +1,2 @@
+dataset,index,gt,svtrv2,geometry_v3,unified_v1,reference_prediction,reference_strategy,sage_v3,sage_v3_strategy,sage_v4,sage_v4_strategy,sage_v4_reason,gpu_candidates,baseline_correct,unified_correct,v3_correct,v4_correct,v4_minus_unified_edit_errors
+u14m/multi_oriented,616,DUMMIES,dummes,dummes,dummies,dummes,original,dummies,rotate_ccw,dummes,original,reference_fallback,1,0,1,1,0,1

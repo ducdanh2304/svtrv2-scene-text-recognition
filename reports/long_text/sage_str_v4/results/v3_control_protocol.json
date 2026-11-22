@@ -1,0 +1,113 @@
+{
+  "calibration": {
+    "orientation": {
+      "temperature": 1.0732758210808895,
+      "n": 27,
+      "nll": 0.6029751881249668
+    },
+    "recovery": {
+      "temperature": 0.7088383153673817,
+      "n": 175,
+      "nll": 0.4213314710043645
+    }
+  },
+  "tune": {
+    "thresholds": {
+      "orientation": -0.2,
+      "recovery": -0.1
+    },
+    "tune": {
+      "wins": 8,
+      "harms": 0,
+      "edit_gain": 206,
+      "promoted": 24,
+      "n": 224
+    },
+    "by_source": {
+      "LTB": {
+        "wins": 4,
+        "harms": 0,
+        "edit_gain": 194,
+        "promoted": 19,
+        "n": 117
+      },
+      "u14m/multi_oriented": {
+        "wins": 3,
+        "harms": 0,
+        "edit_gain": 11,
+        "promoted": 4,
+        "n": 34
+      },
+      "u14m/multi_words": {
+        "wins": 1,
+        "harms": 0,
+        "edit_gain": 1,
+        "promoted": 1,
+        "n": 28
+      },
+      "evaluation/IIIT5k": {
+        "wins": 0,
+        "harms": 0,
+        "edit_gain": 0,
+        "promoted": 0,
+        "n": 23
+      },
+      "evaluation/CUTE80": {
+        "wins": 0,
+        "harms": 0,
+        "edit_gain": 0,
+        "promoted": 0,
+        "n": 22
+      }
+    }
+  },
+  "audit": {
+    "passed": true,
+    "n": 306,
+    "summary": {
+      "wins": 21,
+      "harms": 2,
+      "edit_gain": 362,
+      "promoted": 50,
+      "n": 306
+    },
+    "by_source": {
+      "LTB": {
+        "wins": 12,
+        "harms": 1,
+        "edit_gain": 344,
+        "promoted": 40,
+        "n": 168
+      },
+      "u14m/multi_oriented": {
+        "wins": 7,
+        "harms": 1,
+        "edit_gain": 13,
+        "promoted": 8,
+        "n": 45
+      },
+      "u14m/multi_words": {
+        "wins": 2,
+        "harms": 0,
+        "edit_gain": 5,
+        "promoted": 2,
+        "n": 28
+      },
+      "evaluation/IIIT5k": {
+        "wins": 0,
+        "harms": 0,
+        "edit_gain": 0,
+        "promoted": 0,
+        "n": 25
+      },
+      "evaluation/CUTE80": {
+        "wins": 0,
+        "harms": 0,
+        "edit_gain": 0,
+        "promoted": 0,
+        "n": 40
+      }
+    },
+    "note": "Development audit; no OOD guarantee or conformal claim"
+  }
+}

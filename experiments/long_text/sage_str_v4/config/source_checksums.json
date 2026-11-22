@@ -1,0 +1,17 @@
+{
+  "src/longtext_v3.py": "a6ab63a6b1324f8f6ee61eb8dd0f931896f9da06a3b69226e41400d176711695",
+  "src/sage_gpu_adapter.py": "d642f96944bd1512b7acdf723404cfb1fb2879d07487da0857b9c810ea23ea61",
+  "src/unified_router.py": "0fcc4defdf2388ca2061bc8cb8e1fe18b945069b20ab7dae08876d0ad20b527d",
+  "src/longtext_final.py": "255b58fe53b54fbd35b924a6e530cdfdade5fc8baf3b76f050089d7632bc681b",
+  "src/orientation_probe.py": "1747862312392df4f565b9b0793d79f7823b56125891a917bbc3be1677a71b3d",
+  "src/density_probe.py": "61453c54b9a634a7d076b49c91aa7d0b4242307f81e7450e09db8dab21d212de",
+  "src/sage_str_v4/selector.py": "f5ff65b03239c56cd2a7fb5ab39262bde8e10ee86dc25116e9713cf6f94e1c55",
+  "src/sage_str_v4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/sage_str_v4/batch.py": "f177bd7f94c42713c8e92ade3f0577be952fbe549ab1c843615f3fa9abe09de3",
+  "src/sage_str_v2/selector.py": "c941f81ad0cdafdf49eb90d22f32d78ec50c9fab2f8c5f240771419a643f19fe",
+  "src/sage_str_v2/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/sage_str_v2/ctc_evidence.py": "d3a50bdbccfffc272438a2d6e022832d0f1cba3a340391ceedcb57a5435f0a2d",
+  "src/sage_str_v3/selector.py": "738a73cedf457c8032754f8fbe7ea919859dafb0afeb73d9b474752973618044",
+  "src/sage_str_v3/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "notebooks/SAGE_STR_v4_Kaggle_RunAll.ipynb": "a0f824f3f5f8876d822abc910f5fffa3988f22cdd10d80fedf7ccc9cc53718d7"
+}
