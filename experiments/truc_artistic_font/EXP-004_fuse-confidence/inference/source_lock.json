@@ -1,0 +1,19 @@
+{
+  "openocr_waterec": {
+    "repo": "https://github.com/YesianRohn/OpenOCR-WATERec",
+    "commit": "d895bc57dade600923015267c87df2a40a3147b5",
+    "commit_date": "2026-03-10",
+    "note": "Cell clone --depth 1 HEAD; HEAD không đổi từ 2026-03-10 đến 21/11/2026 nên mọi run (R3, GAC, FUSE) dùng commit này."
+  },
+  "waterec_rs_checkpoint": {
+    "hf_repo": "Yesianrohn/WATERec-Models",
+    "file": "WATERec-RS.pth",
+    "hf_revision": "678247a94c09c462811647c87f338cb2169d94c0"
+  },
+  "svtrv2_b0_init": "Kaggle notebook trctrnthanh386/xulianh-deblur: restormer_truc/official_svtrv2_base/best.pth (baseline + init của R3)",
+  "r3_lowlr_checkpoint": "Kaggle dataset trctrnthanh386/fuse-release: fuse_release/r3_lowlr_best.pth",
+  "character_dict": "OpenOCR-WATERec tools/utils/EN_symbol_dict.txt",
+  "extra_pip": ["lmdb", "rapidfuzz", "pyclipper", "shapely", "imgaug (--no-deps)"],
+  "compat_patch": "sitecustomize.py thêm np.sctypes cho numpy>=2 (xem kaggle_fuse_release_cell.py, mục SETUP)",
+  "hardware": "Kaggle 2x Tesla T4"
+}
