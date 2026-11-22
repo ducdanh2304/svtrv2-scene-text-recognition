@@ -1,0 +1,14 @@
+{
+ "method": "FUSE",
+ "svtr": "R3_lowlr+TTA",
+ "waterec": "WATERec-RS (HF Yesianrohn/WATERec-Models)",
+ "delta": 0.15,
+ "rule": "same -> keep; else WATERec if score_W + delta >= score_S else SVTRv2",
+ "r3_md5": "bd04e457c3c12aa08482d55f306a3567",
+ "recipe": {
+  "data": "T20k_R50k",
+  "lr": 1e-05,
+  "freeze": 0,
+  "val": "wordart"
+ }
+}
