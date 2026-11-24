@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "cohort": "blur_f008",
+  "total": 200,
+  "scored": 200,
+  "source_groups": 200,
+  "routes": {
+    "artistic": 162,
+    "motion": 17,
+    "longtext": 21
+  },
+  "by_route": {
+    "artistic": {
+      "n": 162,
+      "official_b0_ok": 157,
+      "route_baseline_ok": 158,
+      "e2e_ok": 158
+    },
+    "longtext": {
+      "n": 21,
+      "official_b0_ok": 19,
+      "route_baseline_ok": 19,
+      "e2e_ok": 18
+    },
+    "motion": {
+      "n": 17,
+      "official_b0_ok": 17,
+      "route_baseline_ok": 17,
+      "e2e_ok": 17
+    }
+  },
+  "b0_correct": 193,
+  "e2e_correct": 193,
+  "gained": 2,
+  "harmed": 2,
+  "changed": 26,
+  "b0_accuracy_pct": 96.5,
+  "e2e_accuracy_pct": 96.5,
+  "gain_pp": 0.0,
+  "b0_cer": 0.01005,
+  "e2e_cer": 0.015075,
+  "official_median_ms_includes_warmup": 22.84,
+  "e2e_pair_median_ms_includes_warmup": 282.63,
+  "scoring": "Unicode alnum casefold exact-match; pooled normalized character error rate",
+  "note": "Development blur; shared source groups",
+  "journal": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_blur_f008.jsonl",
+  "identity": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_blur_f008_identity.json"
+}

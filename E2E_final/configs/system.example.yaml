@@ -1,0 +1,20 @@
+mode: motion
+routing:
+  long_ratio_min: 5.0
+  blur_laplacian_var_max: 35.0
+  auto_short_default: artistic
+artistic:
+  fuse_delta: 0.15
+assets:
+  openocr_repo: __E2E_FINAL_ROOT__/external/OpenOCR
+  official_checkpoint: __E2E_FINAL_ROOT__/checkpoints/official/best.pth
+  official_config: __E2E_FINAL_ROOT__/checkpoints/official/config.local.yml
+  motion_model_dir: __E2E_FINAL_ROOT__/checkpoints/motion_export
+  r3_checkpoint: __E2E_FINAL_ROOT__/inputs/truc_fuse/r3_lowlr_best.pth
+  r3_config: __E2E_FINAL_ROOT__/configs/truc_fuse/r3_runtime.local.yml
+  waterec_repo: __E2E_FINAL_ROOT__/external/OpenOCR-WATERec
+  waterec_checkpoint: __E2E_FINAL_ROOT__/checkpoints/waterec/WATERec-RS.pth
+  waterec_config: __E2E_FINAL_ROOT__/configs/truc_fuse/waterec_runtime.local.yml
+  sage_selector: __E2E_FINAL_ROOT__/research_upstream/experiments/long_text/sage_str_v4/artifacts/v4_contextual_arbiter.joblib
+device: cuda:0
+strict_components: true

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "cohort": "u14m_artistic",
+  "total": 900,
+  "scored": 898,
+  "source_groups": 900,
+  "routes": {
+    "artistic": 860,
+    "longtext": 40
+  },
+  "by_route": {
+    "artistic": {
+      "n": 859,
+      "official_b0_ok": 608,
+      "route_baseline_ok": 675,
+      "e2e_ok": 718
+    },
+    "longtext": {
+      "n": 39,
+      "official_b0_ok": 27,
+      "route_baseline_ok": 27,
+      "e2e_ok": 25
+    }
+  },
+  "b0_correct": 635,
+  "e2e_correct": 743,
+  "gained": 127,
+  "harmed": 19,
+  "changed": 289,
+  "b0_accuracy_pct": 70.7127,
+  "e2e_accuracy_pct": 82.7394,
+  "gain_pp": 12.0267,
+  "b0_cer": 0.075076,
+  "e2e_cer": 0.042111,
+  "official_median_ms_includes_warmup": 24.03,
+  "e2e_pair_median_ms_includes_warmup": 317.22,
+  "scoring": "Unicode alnum casefold exact-match; pooled normalized character error rate",
+  "note": "Research-exposed Artistic benchmark",
+  "journal": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_u14m_artistic.jsonl",
+  "identity": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_u14m_artistic_identity.json"
+}

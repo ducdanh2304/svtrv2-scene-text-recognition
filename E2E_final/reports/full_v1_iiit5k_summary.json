@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "cohort": "iiit5k",
+  "total": 3000,
+  "scored": 3000,
+  "source_groups": 3000,
+  "routes": {
+    "artistic": 2735,
+    "longtext": 217,
+    "motion": 48
+  },
+  "by_route": {
+    "artistic": {
+      "n": 2735,
+      "official_b0_ok": 2699,
+      "route_baseline_ok": 2708,
+      "e2e_ok": 2720
+    },
+    "longtext": {
+      "n": 217,
+      "official_b0_ok": 213,
+      "route_baseline_ok": 213,
+      "e2e_ok": 213
+    },
+    "motion": {
+      "n": 48,
+      "official_b0_ok": 46,
+      "route_baseline_ok": 46,
+      "e2e_ok": 46
+    }
+  },
+  "b0_correct": 2958,
+  "e2e_correct": 2979,
+  "gained": 29,
+  "harmed": 8,
+  "changed": 261,
+  "b0_accuracy_pct": 98.6,
+  "e2e_accuracy_pct": 99.3,
+  "gain_pp": 0.7,
+  "b0_cer": 0.003603,
+  "e2e_cer": 0.002293,
+  "official_median_ms_includes_warmup": 22.26,
+  "e2e_pair_median_ms_includes_warmup": 269.51,
+  "scoring": "Unicode alnum casefold exact-match; pooled normalized character error rate",
+  "note": "Evaluation; upstream overlap not certified",
+  "journal": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_iiit5k.jsonl",
+  "identity": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_iiit5k_identity.json"
+}

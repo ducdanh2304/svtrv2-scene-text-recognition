@@ -1,0 +1,106 @@
+{
+  "release": "E2E_FINAL_V1_2026-11-24",
+  "original_config_sha256": "89c441cabd653dd050bf8b384bfa8995b3cf188356cdb3d75b346c41135fd819",
+  "source_git_commit": null,
+  "external_commits": {
+    "OpenOCR": "1ccfc6ee6161f7133b192e16af3a9265273997ba",
+    "OpenOCR-WATERec": null
+  },
+  "model_assets_not_uploaded": {
+    "official_checkpoint": [
+      {
+        "path": "checkpoints/official/best.pth",
+        "size": 22918097,
+        "sha256": "684f23bc3a2b1f724cadfd275e1a185456dd51b5e56c8830780d1998e90f77f6"
+      }
+    ],
+    "r3_checkpoint": [
+      {
+        "path": "inputs/truc_fuse/r3_lowlr_best.pth",
+        "size": 84189360,
+        "sha256": "444fe69c2866c11f624a1f9c01ba4f547b52069f89979082114bf66e2f55b7e9"
+      }
+    ],
+    "waterec_checkpoint": [
+      {
+        "path": "checkpoints/waterec/WATERec-RS.pth",
+        "size": 112225584,
+        "sha256": "cdc3e33a61a08a1fb7f00cb3054cd74a9259863830869d7546ec5e2bc8714801"
+      }
+    ],
+    "motion_model_dir": [
+      {
+        "path": "checkpoints/motion_export/adapter_a123_state.pt",
+        "size": 326146,
+        "sha256": "f9749884dc1031084cf991698ac3a766493f871b16888d1b0c2a8407c619f115"
+      },
+      {
+        "path": "checkpoints/motion_export/b0_rctc_state.pt",
+        "size": 20571418,
+        "sha256": "25d8cf625559fe1e8178d075096c237e84576836c998ec92efc2e5655e89bbe2"
+      },
+      {
+        "path": "checkpoints/motion_export/manifest.json",
+        "size": 1062,
+        "sha256": "378308a8d0420dd39788931dd7d08724b5b8060cede3cef5dcce64751a7a4447"
+      },
+      {
+        "path": "checkpoints/motion_export/s2_aug_state.pt",
+        "size": 20571234,
+        "sha256": "2dcecb13c737219d7a9c11d0de2b4744da546737c92de59936a4e75df938278c"
+      }
+    ]
+  },
+  "files_sha256": {
+    ".gitignore": "3bbb7413228a183a3936398eda63513f39939e8f16a6312685e310820a33bcc3",
+    "README.md": "e6aec72dcc4b697eb404ef25763a0515fecc0a527dcb12af43fb9c0180bb7002",
+    "checkpoints/motion_export/manifest.json": "378308a8d0420dd39788931dd7d08724b5b8060cede3cef5dcce64751a7a4447",
+    "checkpoints/official/config.yml": "f1ab35a0f5e44d3c24c940cdf1a07404068ad9191bad9fe232ad4fcf38bbbe29",
+    "configs/system.example.yaml": "87250b86630327edf34936ffbdd1ab31200ffca5233e9315dd16390dff3a1f8b",
+    "configs/truc_fuse/r3_runtime.yml": "d1d75cbf8896ae4a484d6e9c3aafa010be0ba63aede5aa73ac684cbe0abea974",
+    "configs/truc_fuse/waterec_runtime.yml": "0a937a635829b4917683ff1f42b10f2a5c2c6c78f6ce124b341f41dc3f096b09",
+    "outputs/unified_v4/provenance_official/official_rgb_mapping.csv": "dda739c88d8e33ab036f94b2734e362454539f8c47c067554385589fa4f878e8",
+    "reports/full_v1_all_cohorts_summary.json": "dc133f2420d6fdf3e896093020967ae3a5100a09158b37942441ac380f67e5f9",
+    "reports/full_v1_blur_f008_summary.json": "d448dbf7aa7e5a4d8ebdfc618ee32295a2adb9a814c50be10ab5826edd3048b4",
+    "reports/full_v1_blur_f018_summary.json": "bc58fd31661a27160481c20e3623196778c5de1e8a462473d588094459982731",
+    "reports/full_v1_blur_f030_summary.json": "6c54e141b04cec35b12d2edc710c26e1df20c903a20fae087ccbb59a1a055bb7",
+    "reports/full_v1_iiit5k_summary.json": "17e6b488b6d97924a4878918829ee0ef0b8954a13383469773bb3dbc825a20a5",
+    "reports/full_v1_ltb_clean_eval_summary.json": "a5ec1037967e25dd7704fd1de02c115c32804d88a8dc4bbfce1e32dd546bdd5e",
+    "reports/full_v1_report_table.md": "07f9f4a1364ace5558631a03f0c14250c6f494fcb4f4e6e53c1744976450e696",
+    "reports/full_v1_results.csv": "20df7c82b2b03c7d16ba6595bb5d5489562c5ba02be2d4425df71e77afaab65f",
+    "reports/full_v1_u14m_artistic_summary.json": "9ff20803543a718fbb63b8535566d550862b627d446e1f8cf32a7cbbe42ae887",
+    "scripts/evaluate_unified_e2e_v1.py": "893c82881f7dc7d42f598ab587bd1a04b96a06d3a4a249deddfece29a7804273",
+    "scripts/finalize_e2e_benchmark_v1.py": "d10c1f0bff337d0a703547873fa6c6a41d011621b162f5b9da38c03536183328",
+    "scripts/launch_e2e_clock_safe_v1.py": "8ae296a992aeda7415a25286b98dbef202f7b83584016e265e7465fb59ea2fbe",
+    "scripts/predict_auto.py": "e9a382087c2e257d1480bfbed9c4f13ab046407af3f0feb9115229c5a957db80",
+    "scripts/setup_local.py": "531f833d8c5871f7858f86fe379691d9203371b7f8c49980321ccd281fed9f97",
+    "src/str_e2e/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/str_e2e/adaptive.py": "035c640b97b8bd3fbffc75ec287928ee33603060b5e01485a29faa4455cbf217",
+    "src/str_e2e/archive.py": "c0c0a742cce80c813bb0531227efa95a093b82ca5a0d7934eb81666919692a1b",
+    "src/str_e2e/backends/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/str_e2e/backends/artistic.py": "3a937ecfc394905ad72e15ad2edf1f5df1762dee8955dd68e94eac14a10e4652",
+    "src/str_e2e/backends/longtext.py": "c042e214d59192a30a79e9375d311d23dc9cceeb33230c85e840f9660e4034d5",
+    "src/str_e2e/backends/longtext_sage_legacy.py": "583d2ba62b37e17471df5fd23a86180dc9860654c137bd02280f5996a5668303",
+    "src/str_e2e/backends/motion.py": "9bc0473312845054eb89f41cd3a7285283940c34611d9e3138b6d20b49adb4d7",
+    "src/str_e2e/backends/official.py": "bb07c25b1ec7aa1ccb9fad79c3ff5875549d1b99c3ffe34a0bdc0cc048bf1e91",
+    "src/str_e2e/backends/waterec.py": "25a621dcd1d5d39569ba4848225a63dc3648270d39be336b37503bd0eb95c0dc",
+    "src/str_e2e/backends/waterec_worker.py": "557562dc6dd043c7207078bc297877f14f0b469700c733ddabaf47a4c015e8c5",
+    "src/str_e2e/cli.py": "ac7dd86adf254541b0676dfb937e1d7399b49da6bd65651fd69e395bff130d10",
+    "src/str_e2e/datasets.py": "f2ba641a720452c88425910d4e8a4be50a96ae0aaef6727285331a5260bfe641",
+    "src/str_e2e/evaluation.py": "4d2d1a513f72350552c036ae0a7f0e7000e479d8323e1cf78ffc57eb76074fbe",
+    "src/str_e2e/gate_v4_shadow.py": "4d11dffa650fcdb57e3643ab272a9aab72df11b4429925de411561b008631422",
+    "src/str_e2e/metrics.py": "f6d28d61599a5f187150cb8a9dfcee29d44f7ec3aa3547ab14abeadcd751571b",
+    "src/str_e2e/paths.py": "98406021a2f22f6dfd1abcad4900a97ff997e1461a228367252bea746159d30f",
+    "src/str_e2e/router_motion_features.py": "725cd5b03cb2b7c5d7efec7b4e76d92d1da6ce7cb7a0ad1c65262698e77aa21e",
+    "src/str_e2e/router_v3_features.py": "aefb90206d0290655dbe93fa5b3e963bd2ffd3ed727b467116f9527761276ef9",
+    "src/str_e2e/routing.py": "0c4e8186d3791cc6dfeacc4233b0d7f00b60317595c0e0fb91130bc37eb5de72",
+    "src/str_e2e/system.py": "5e1d7eac2d0136202df52200a46991a06a406795a9c8b180aae522ff4dbd5a11",
+    "src/str_e2e/types.py": "48bda973058a38d5a6e6ee7acccf67b722513c15b9c78a62c9f6b97432262e1a",
+    "src/str_e2e/unified_v2.py": "f8b8894df3ef6594175658420ad200f63e64019bea5af2e74e3637fe0cadea2b",
+    "src/str_e2e/unified_v3.py": "c4accab3c5dd984ee6875750c3557e5bc863ab967410013906eae554138e3301",
+    "src/str_e2e/unified_v31.py": "e003e29f2e4968aaa825d0d3924ff59c1db443cff79f2509382251e1c2c9d913",
+    "src/str_e2e/unified_v32.py": "99cedebb5a01e8a8c94a8c607bda279ab383189222dd2e8c9c82e44da6fbc076",
+    "tests/test_scope_dispatch.py": "f53ba455a8f53f64440ce062214e894e6ac6599d3c040c2945cb47812c93a216",
+    "tests/test_system_dispatch.py": "80847ce523bdc1467cbfcd3203effc0b8128776afee9f43a097cb31285a47c5f"
+  }
+}

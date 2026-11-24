@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "cohort": "ltb_clean_eval",
+  "total": 240,
+  "scored": 240,
+  "source_groups": 240,
+  "routes": {
+    "longtext": 217,
+    "artistic": 23
+  },
+  "by_route": {
+    "artistic": {
+      "n": 23,
+      "official_b0_ok": 0,
+      "route_baseline_ok": 0,
+      "e2e_ok": 0
+    },
+    "longtext": {
+      "n": 217,
+      "official_b0_ok": 80,
+      "route_baseline_ok": 80,
+      "e2e_ok": 124
+    }
+  },
+  "b0_correct": 80,
+  "e2e_correct": 124,
+  "gained": 50,
+  "harmed": 6,
+  "changed": 237,
+  "b0_accuracy_pct": 33.3333,
+  "e2e_accuracy_pct": 51.6667,
+  "gain_pp": 18.3333,
+  "b0_cer": 0.324647,
+  "e2e_cer": 0.101437,
+  "official_median_ms_includes_warmup": 22.88,
+  "e2e_pair_median_ms_includes_warmup": 362.12,
+  "scoring": "Unicode alnum casefold exact-match; pooled normalized character error rate",
+  "note": "Historical clean eval, not independent",
+  "journal": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_ltb_clean_eval.jsonl",
+  "identity": "/mlcv1/WorkingSpace/Personal/core_baotg/thu/SVTRv2_EndToEnd_Final/outputs/unified_v4/e2e_benchmark_v1/full_v1_ltb_clean_eval_identity.json"
+}
