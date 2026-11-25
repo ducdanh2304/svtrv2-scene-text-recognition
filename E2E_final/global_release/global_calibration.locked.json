@@ -1,0 +1,19 @@
+{
+  "weights": [
+    0.045000668058492614,
+    0.12296514318509896,
+    0.8320341887564084
+  ],
+  "temperatures": [
+    2.0898067070927353,
+    0.16034475576095658,
+    0.6942903667963607
+  ],
+  "n": 240,
+  "supported": 213,
+  "source_groups": 139,
+  "nll_before": 0.2688797226312756,
+  "nll_after": 0.21774634786215535,
+  "fit_status": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+  "manifest_sha256": "141ab45e4629abfb930b965492d5718875050a9918a69eab35fce3d050606e3f"
+}
