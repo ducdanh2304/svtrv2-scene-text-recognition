@@ -1,0 +1,97 @@
+{
+  "run_id": "20261125T030112Z",
+  "source_commit": "6c23fdca74f0b2ece561e5804c984a7646c2aa31",
+  "input_archive_sha256": "c0f457872ad3a7d9becc26738649e0abad1ef510ec9599fe5eb88e5add5ec249",
+  "run_status": {
+    "run_id": "20261125T030112Z",
+    "source_commit": "6c23fdca74f0b2ece561e5804c984a7646c2aa31",
+    "stages": {
+      "archive": "PASS_EXPANDED_LAYOUT",
+      "asset_source_hashes": "PASS_RELEASE_AND_CHECKPOINTS_EXPANDED_EXTERNAL_UNVERIFIED",
+      "environment": "PASS",
+      "dataset_identity": "PASS_RGB_AND_AVAILABLE_REFERENCE_GT",
+      "regression": "PASS",
+      "forced_gpu_smoke": "PASS",
+      "auto_smoke": "PASS",
+      "full_comparison": "SKIPPED",
+      "pipeline": "COMPLETED",
+      "global_preflight": "PASS_CPU",
+      "global_gpu_smoke": "PASS_EXECUTION",
+      "full_iiit5k": "PASS_EXECUTION",
+      "full_u14m_artistic": "PASS_EXECUTION",
+      "full_blur_f008": "PASS_EXECUTION",
+      "full_blur_f018": "PASS_EXECUTION",
+      "full_blur_f030": "PASS_EXECUTION",
+      "full_ltb_clean_eval": "PASS_EXECUTION",
+      "full_global": "PASS_EXECUTION"
+    },
+    "parity": "NOT_RUN"
+  },
+  "counts": {
+    "inference": 9289,
+    "scored": 9287,
+    "known_calibration_overlap": 240,
+    "independent_b0_vs_trace_mismatch": 0,
+    "reference_recognizer_checks": 640,
+    "source_files_matched": 10
+  },
+  "source_sha256": {
+    "src/str_e2e/backends/global_joint.py": "3122bdf3d8ec209ed25b22dae32e1685abc9fabbdc24a98a8d0e3f2ffad34d52",
+    "src/str_e2e/backends/global_probability.py": "1c18f6141db4fdf354ed5de89d94951b2b2a7a865e13f69d90f23495d5036aca",
+    "global_release/full_global_eval.py": "a741a2b46c6ea0ffa2333a205d7e7ca00823e7fd294ea7ba8cae0a613a785bca",
+    "global_release/global_calibration.locked.json": "fdcb01ff353c29653b2edaca354b8fe863115db31b053ee833ceff032a573bea",
+    "src/str_e2e/backends/joint.py": "370ddf1e9076c6ac761c96514c88358cd2a1fa576269742ba27a0741249258af",
+    "src/str_e2e/backends/joint_ar.py": "a06d4decb0bfc929ec035235814923c7fb0424329c184fef7a31ce3ff01c3f30",
+    "src/str_e2e/backends/ar_scoring.py": "6a7239d3653b1e98f398c635c08259310fdeb2ac62cec5d18d26fbebf29cb66f",
+    "src/str_e2e/backends/final_evidence.py": "893fe57d4d23cd68d01666d02914b71f0df2be3fd742145474b3840b9b5899e6",
+    "src/str_e2e/backends/waterec_ar.py": "bc534e0561214b63d8d069cd432f61b51268fd47287de989960953057f65ca30",
+    "src/str_e2e/backends/waterec_ar_worker.py": "c103aff7911e0eef05e627726708721854d07549f6fe90dc7792c1e397c51ffd"
+  },
+  "dataset_identity_audit": {
+    "iiit5k": {
+      "count": 3000,
+      "rgb_verified": 3000,
+      "gt_verified": 3000,
+      "db_size": 51793920
+    },
+    "u14m_artistic": {
+      "count": 900,
+      "rgb_verified": 900,
+      "gt_verified": 900,
+      "db_size": 27856896
+    },
+    "blur_f008": {
+      "count": 200,
+      "rgb_verified": 200,
+      "gt_verified": 200,
+      "db_size": 2719744
+    },
+    "blur_f018": {
+      "count": 200,
+      "rgb_verified": 200,
+      "gt_verified": 200,
+      "db_size": 2793472
+    },
+    "blur_f030": {
+      "count": 200,
+      "rgb_verified": 200,
+      "gt_verified": 200,
+      "db_size": 2809856
+    },
+    "ltb_clean_eval": {
+      "count": 4789,
+      "rgb_verified": 4789,
+      "gt_verified": 240,
+      "db_size": 74366976
+    }
+  },
+  "verified": "Recomputed counts, Levenshtein edits, paired gains/harms, empty predictions, A-Avg from all archived predictions; matched all per-dataset CSV rows.",
+  "limitations": [
+    "Full historical corpus, not an independent holdout.",
+    "240 known calibration overlaps; exclusion does not establish project-wide independence.",
+    "RGB identity verified by runtime for all rows; historical reference GT for LTB only 240 rows.",
+    "Expanded input: original compressed bytes and external source provenance not fully verified.",
+    "Original V1 full comparison skipped; independent B0 vs internal trace agrees on all rows.",
+    "Full evaluator GPU execution completed; additive GlobalSTRSystem API/CLI not separately GPU-smoke-tested."
+  ]
+}

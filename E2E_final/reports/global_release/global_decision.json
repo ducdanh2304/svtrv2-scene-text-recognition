@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "iiit5k": false,
+    "u14m_artistic": false,
+    "ltb_clean_eval": false,
+    "iiit5k_controlled_blur": false,
+    "u14m_artistic_controlled_blur": true,
+    "ltb_clean_eval_controlled_blur": false,
+    "overall": false,
+    "fresh_iiit5k": true,
+    "fresh_u14m_artistic": true,
+    "fresh_ltb_clean_eval": false,
+    "fresh_iiit5k_controlled_blur": true,
+    "fresh_u14m_artistic_controlled_blur": true,
+    "fresh_ltb_clean_eval_controlled_blur": false,
+    "fresh_overall": false,
+    "fresh_coverage": true
+  },
+  "decision": "KEEP_STABLE",
+  "note": "No automatic promotion. 940 rows research-exposed; fresh composition IDs are not independent of entire project. Calibration on disjoint historical dev only. No checkpoint update."
+}
