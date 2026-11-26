@@ -1,0 +1,23 @@
+{
+  "run_id": "20261125T180605Z",
+  "decision": "PASS_FINAL_E4_BATCH",
+  "full_zip_sha256": "20a9aa33da74e2a4e6f915e598015e81bd0dcf7309e91d1748d8a1d3197125ab",
+  "historical_zip_sha256": "c0f457872ad3a7d9becc26738649e0abad1ef510ec9599fe5eb88e5add5ec249",
+  "independent_journal_audit": {
+    "rows": 9289,
+    "scored": 9287,
+    "gt_chars": 188798,
+    "all_historical_reference_rows_exact": true,
+    "all_rgb_hash_and_gt_equal": true,
+    "all_raw_predictions_equal": true,
+    "all_recorded_native_and_global_predictions_equal": true,
+    "all_recorded_trace_counts_equal": true,
+    "e4_source_hashes_verified": 6
+  },
+  "limitations": [
+    "Full speed comparison uses separate GPU sessions; the 24-row comparison is same-session.",
+    "Expanded external archive bytes not verified.",
+    "Historical matched benchmark, not independent holdout.",
+    "Deployment wrapper/API integration into GitHub not yet GPU smoke tested."
+  ]
+}

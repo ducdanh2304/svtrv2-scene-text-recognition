@@ -1,16 +1,17 @@
 # Enhanced SVTRv2 for Challenging Scene Text Recognition
 
-**CS406 course project — Global CTC–AR hypothesis decoding with spatial-first evidence fusion**
+**CS406 course project — Efficient Global CTC–AR Spatial-first (ULTIMATE / E4-Batch)**
 
 This repository extends the official SVTRv2-T recognizer to address three complementary challenges: long text, motion blur and artistic typography. The proposed integration reuses frozen recognizers and the original spatial reconstruction algorithm. It evaluates complete transcription hypotheses using CTC and autoregressive (AR) likelihoods over full-image and overlapping spatial views. It does not classify images by degradation type, train a new backbone or merge incompatible checkpoint tensors.
 
-**Release status:** research release candidate. Global and Spatial-first have completed the full six-condition GPU benchmark: 9,289 observations, 9,287 scored. Spatial-first is the proposed release method. The additive inference API/CLI still needs a separate deployment smoke test. The existing stable modes remain unchanged. No claim of independent state-of-the-art performance is made.
+**Release status:** ULTIMATE / E4-Batch passed the full historical GPU benchmark (`PASS_FINAL_E4_BATCH`, run `20261125T180605Z`). All 9,289 raw predictions match Global Spatial-first before optimization. The new deployment wrapper still requires a GPU smoke test. The original Global and specialist modes are preserved in their existing runtime. No independent state-of-the-art claim.
 
 ## Contents
 
 - [Architecture and contributions](#architecture-and-contributions)
 - [Method](#method)
 - [Experimental results](#experimental-results)
+- [ULTIMATE optimization](#ultimate--verified-inference-optimization)
 - [Installation and inference](#installation-and-inference)
 - [Full benchmark](#full-benchmark)
 - [Repository layout](#repository-layout)
@@ -186,6 +187,48 @@ These are historical results for SCOPE-CTC V4, not Global or Spatial-first. Accu
 | ≥56 | 266 | 0.00 | 44.74 | 90.62 | 12.22 |
 | Overall | 4,789 | 33.85 | 56.13 | 31.24 | 8.12 |
 | A-Avg | — | 18.40 | 51.10 | — | — |
+
+## ULTIMATE — verified inference optimization
+
+The final recognition policy is unchanged. Four implementation optimizations remove redundant computation without dropping evidence, refitting calibration, or training new weights:
+
+| Stage | Mechanism | Full-run evidence |
+|---|---|---:|
+| E1 | Causal masked teacher-forced parallel scoring of known AR candidates, including EOS | 528,653 fast candidate scores |
+| E2 | Image-local bounded WATERec observation cache | 55,160 hits |
+| E3 | Reuse CTC distributions and sequence scores; Numba forward recurrence, no fastmath | 2,036,217 view hits; 232,743 score hits |
+| E4 | Exact tensor-output cache and shape-grouped batches for S2 and R3 TTA | 24,723 hits; S2 33,390 items / 16,822 batches; R3 96,040 / 45,626 |
+
+| Full benchmark (9,289 timed inputs, 9,287 scored) | B0 | Global Spatial-first | ULTIMATE |
+|---|---:|---:|---:|
+| Accuracy (%) | 61.70 | 78.11 | 78.11 |
+| CER (%) | 27.68 | 8.05 | 8.05 |
+| Mean evidence latency (ms) | 9.88 | 2,933.48 | 755.64 |
+| P95 (ms) | 11.34 | 7,839.48 | 2,019.83 |
+
+Full comparison is matched by image identity but **cross-session**: 3.88× faster, 74.24% less evidence time. The 24-image direct same-session comparison is 8.90 ms (B0), 2,620.10 ms (Global), 799.58 ms (ULTIMATE), or 3.28× versus Global. ULTIMATE is still much slower than B0. Its measured evaluator loop mean is 756.41 ms; no application end-to-end or real-time claim. All 9,289 raw predictions and recorded traces match. See `E2E_final/ultimate_release/reports/` for full results and audit. The known calibration overlap of 240 observations and expanded archive verification limitations still apply.
+
+### ULTIMATE installation and inference
+
+Use the existing Python 3.12/CUDA dependencies below. Prepare a **new** workspace outside the checkout; do not overwrite the old runtime. The new preparation script calls the original resource verifier, then installs the exact benchmark backend files into the isolated runtime. No GT or archived predictions needed for single-image inference.
+
+```bash
+python E2E_final/ultimate_release/prepare_ultimate_runtime.py --bundle /path/to/E2E.zip --work /path/to/new-ultimate-runtime
+cd /path/to/new-ultimate-runtime/E2E_final
+export PYTHONPATH="$PWD/src"
+python -m str_e2e.ultimate_cli --config configs/system.local.yaml --image /path/to/text.png
+```
+
+```python
+from PIL import Image
+from str_e2e.ultimate_pipeline import UltimateSTRSystem
+with UltimateSTRSystem.from_config('configs/system.local.yaml') as system:
+    with Image.open('example.png') as image:
+        result = system.predict(image.convert('RGB'))
+        print(result.text, result.latency_ms)
+```
+
+Sequential inference only; the wrapper manages per-image caches and the persistent WATERec process. GPU smoke test of this **new adapter** remains pending; the full benchmark used the original evaluator, not this wrapper. Use the private ULTIMATE LITE notebook and reference payload for exact benchmark reproduction; do not publish them with image-level predictions. The older instructions below remain for Global before optimization.
 
 ## Installation and inference
 

@@ -1,0 +1,20 @@
+{
+  "policy": "E3 fallback; E4 exact cache and shape-grouped batch; fixed 130 pilot; fixed 24 same-session original and B0; no refit; choose once then full",
+  "parent_e3_lock_sha256": "bb844d11e068afbcb5ab1734ec60fc1e54a387a1ca3ce18f9270cbb821d6849d",
+  "pilot_e3_zip_sha256": "58b93463712ce38e0adc3479314243b6133cb4c347efdd0323c51d3479c83917",
+  "new_source_sha256": {
+    "e4_full_eval.py": "f1154eb3e79bfec0ae57658034eaef2b42e4f10cea43ba487b862b922521195d",
+    "e4_pilot.py": "425df8a31a50b95c307f63e3c30c65873f1c9b18d418ca7a405cabe03cb64eb7",
+    "e4_select.py": "c7f10104e78ba4552560dec5cfbdc695c16ff201f1d26d44833737dbb7f580b9",
+    "efficient_global.py": "4b90434240bd2db1a5f8e10d1b213cbd91127adee2005a638d6834c064c13219",
+    "efficient_vision.py": "da60ceb6e4f92fee604498302f6d2f8052c8b94e69ee508cfa2303880b4c828a",
+    "test_efficient_vision.py": "ad37e5da348a82ab51319ae1f730c44996ec1c04d725ebeea5074e342756f7ba"
+  },
+  "gate": {
+    "distribution_delta_max": 0.0002,
+    "e4_speedup_vs_e3_min": 1.1,
+    "per_group_max_slowdown": 1.05,
+    "same_session_original_speedup_min": 1.2,
+    "exact_prediction_and_trace": true
+  }
+}

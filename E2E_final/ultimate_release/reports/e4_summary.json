@@ -1,0 +1,616 @@
+{
+  "baseline_same_session": {
+    "n": 24,
+    "mean_ms": 8.900083083325683,
+    "p95_ms": 10.257788699959747
+  },
+  "selected_mode": "e4_batch",
+  "decision": "SELECT_E4_BATCH",
+  "reference_parity": true,
+  "e3_parity": true,
+  "gates": {
+    "e4_cache": {
+      "parity": true,
+      "speed": false,
+      "optimization_used": true,
+      "reference_speed_gate": true
+    },
+    "e4_batch": {
+      "parity": true,
+      "speed": true,
+      "optimization_used": true,
+      "reference_speed_gate": true
+    }
+  },
+  "metrics": {
+    "overall": {
+      "e3": {
+        "n": 130,
+        "complete": true,
+        "mean_ms": 909.3062243923132,
+        "p95_ms": 3498.0644842500224,
+        "accuracy_pct": 76.92307692307692,
+        "cer_pct": 11.198120595144871,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 130,
+        "complete": true,
+        "mean_ms": 899.3316214769189,
+        "p95_ms": 3539.6759926000072,
+        "accuracy_pct": 76.92307692307692,
+        "cer_pct": 11.198120595144871,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 368,
+          "ctc_net_misses": 2123,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 130,
+        "complete": true,
+        "mean_ms": 757.6987323000008,
+        "p95_ms": 2851.4004225000235,
+        "accuracy_pct": 76.92307692307692,
+        "cer_pct": 11.198120595144871,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 362,
+          "ctc_net_misses": 1889,
+          "s2_batches": 228,
+          "s2_items": 468,
+          "r3_batches": 634,
+          "r3_items": 1358
+        }
+      }
+    },
+    "iiit5k": {
+      "e3": {
+        "n": 20,
+        "complete": true,
+        "mean_ms": 225.6568419500155,
+        "p95_ms": 275.06046930003833,
+        "accuracy_pct": 100.0,
+        "cer_pct": 0.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 20,
+        "complete": true,
+        "mean_ms": 210.62096095000416,
+        "p95_ms": 260.4851018000147,
+        "accuracy_pct": 100.0,
+        "cer_pct": 0.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 60,
+          "ctc_net_misses": 160,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 20,
+        "complete": true,
+        "mean_ms": 213.3762299999944,
+        "p95_ms": 267.18389514998364,
+        "accuracy_pct": 100.0,
+        "cer_pct": 0.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 60,
+          "ctc_net_misses": 160,
+          "s2_batches": 20,
+          "s2_items": 20,
+          "r3_batches": 59,
+          "r3_items": 59
+        }
+      }
+    },
+    "u14m_artistic": {
+      "e3": {
+        "n": 20,
+        "complete": true,
+        "mean_ms": 300.48033679997843,
+        "p95_ms": 466.5580361499792,
+        "accuracy_pct": 90.0,
+        "cer_pct": 2.586206896551724,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 20,
+        "complete": true,
+        "mean_ms": 284.91524434999747,
+        "p95_ms": 453.562365650032,
+        "accuracy_pct": 90.0,
+        "cer_pct": 2.586206896551724,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 60,
+          "ctc_net_misses": 160,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 20,
+        "complete": true,
+        "mean_ms": 285.45161540000095,
+        "p95_ms": 449.4073291500058,
+        "accuracy_pct": 90.0,
+        "cer_pct": 2.586206896551724,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 60,
+          "ctc_net_misses": 160,
+          "s2_batches": 20,
+          "s2_items": 20,
+          "r3_batches": 58,
+          "r3_items": 58
+        }
+      }
+    },
+    "blur_f008": {
+      "e3": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 237.48669153334654,
+        "p95_ms": 317.974875500056,
+        "accuracy_pct": 100.0,
+        "cer_pct": 0.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 217.9505767999899,
+        "p95_ms": 279.40048790003397,
+        "accuracy_pct": 100.0,
+        "cer_pct": 0.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 45,
+          "ctc_net_misses": 120,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 223.2709704000096,
+        "p95_ms": 283.80038220007003,
+        "accuracy_pct": 100.0,
+        "cer_pct": 0.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 45,
+          "ctc_net_misses": 120,
+          "s2_batches": 15,
+          "s2_items": 15,
+          "r3_batches": 44,
+          "r3_items": 44
+        }
+      }
+    },
+    "blur_f018": {
+      "e3": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 216.23784186667763,
+        "p95_ms": 269.7095751999768,
+        "accuracy_pct": 93.33333333333333,
+        "cer_pct": 1.492537313432836,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 202.36764466665136,
+        "p95_ms": 252.15232750005043,
+        "accuracy_pct": 93.33333333333333,
+        "cer_pct": 1.492537313432836,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 45,
+          "ctc_net_misses": 120,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 201.57949566666198,
+        "p95_ms": 258.023072900005,
+        "accuracy_pct": 93.33333333333333,
+        "cer_pct": 1.492537313432836,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 45,
+          "ctc_net_misses": 120,
+          "s2_batches": 15,
+          "s2_items": 15,
+          "r3_batches": 42,
+          "r3_items": 42
+        }
+      }
+    },
+    "blur_f030": {
+      "e3": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 237.21009766667672,
+        "p95_ms": 277.4268494999774,
+        "accuracy_pct": 93.33333333333333,
+        "cer_pct": 5.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 223.50521286666662,
+        "p95_ms": 259.5525278999844,
+        "accuracy_pct": 93.33333333333333,
+        "cer_pct": 5.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 46,
+          "ctc_net_misses": 118,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 226.68345026668248,
+        "p95_ms": 265.25518339997234,
+        "accuracy_pct": 93.33333333333333,
+        "cer_pct": 5.0,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 44,
+          "ctc_net_misses": 119,
+          "s2_batches": 15,
+          "s2_items": 16,
+          "r3_batches": 42,
+          "r3_items": 44
+        }
+      }
+    },
+    "ltb_clean_eval": {
+      "e3": {
+        "n": 45,
+        "complete": true,
+        "mean_ms": 2162.734358444451,
+        "p95_ms": 3822.5973178000227,
+        "accuracy_pct": 42.22222222222222,
+        "cer_pct": 13.15042573320719,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 45,
+        "complete": true,
+        "mean_ms": 2163.223003799996,
+        "p95_ms": 3898.5895054000134,
+        "accuracy_pct": 42.22222222222222,
+        "cer_pct": 13.15042573320719,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 112,
+          "ctc_net_misses": 1445,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 45,
+        "complete": true,
+        "mean_ms": 1750.0282121333303,
+        "p95_ms": 3132.8647944000063,
+        "accuracy_pct": 42.22222222222222,
+        "cer_pct": 13.15042573320719,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 108,
+          "ctc_net_misses": 1210,
+          "s2_batches": 143,
+          "s2_items": 382,
+          "r3_batches": 389,
+          "r3_items": 1111
+        }
+      }
+    },
+    "ltb/26-35": {
+      "e3": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 1627.7227292666719,
+        "p95_ms": 2689.7577443000046,
+        "accuracy_pct": 60.0,
+        "cer_pct": 7.061503416856492,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 1632.6124556666703,
+        "p95_ms": 2660.1053939000617,
+        "accuracy_pct": 60.0,
+        "cer_pct": 7.061503416856492,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 35,
+          "ctc_net_misses": 393,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 1319.5079642666617,
+        "p95_ms": 2169.234938200043,
+        "accuracy_pct": 60.0,
+        "cer_pct": 7.061503416856492,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 36,
+          "ctc_net_misses": 329,
+          "s2_batches": 42,
+          "s2_items": 105,
+          "r3_batches": 111,
+          "r3_items": 302
+        }
+      }
+    },
+    "ltb/36-55": {
+      "e3": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 1547.831898866677,
+        "p95_ms": 2717.5242112000087,
+        "accuracy_pct": 33.333333333333336,
+        "cer_pct": 15.755627009646302,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 1530.7633911999874,
+        "p95_ms": 2710.9683537000133,
+        "accuracy_pct": 33.333333333333336,
+        "cer_pct": 15.755627009646302,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 39,
+          "ctc_net_misses": 309,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 1262.9806287333245,
+        "p95_ms": 2248.4902012000134,
+        "accuracy_pct": 33.333333333333336,
+        "cer_pct": 15.755627009646302,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 38,
+          "ctc_net_misses": 264,
+          "s2_batches": 38,
+          "s2_items": 84,
+          "r3_batches": 103,
+          "r3_items": 242
+        }
+      }
+    },
+    "ltb/56+": {
+      "e3": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 3312.6484472000056,
+        "p95_ms": 5108.098906799976,
+        "accuracy_pct": 33.333333333333336,
+        "cer_pct": 14.150047483380817,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 0,
+          "ctc_net_misses": 0,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_cache": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 3326.293164533331,
+        "p95_ms": 4926.672704499979,
+        "accuracy_pct": 33.333333333333336,
+        "cer_pct": 14.150047483380817,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 38,
+          "ctc_net_misses": 743,
+          "s2_batches": 0,
+          "s2_items": 0,
+          "r3_batches": 0,
+          "r3_items": 0
+        }
+      },
+      "e4_batch": {
+        "n": 15,
+        "complete": true,
+        "mean_ms": 2667.5960434000067,
+        "p95_ms": 3903.5281963000084,
+        "accuracy_pct": 33.333333333333336,
+        "cer_pct": 14.150047483380817,
+        "historical_mismatches": 0,
+        "vision": {
+          "ctc_net_hits": 34,
+          "ctc_net_misses": 617,
+          "s2_batches": 63,
+          "s2_items": 193,
+          "r3_batches": 175,
+          "r3_items": 567
+        }
+      }
+    }
+  },
+  "reference_mean_ms": 2620.0989290416787,
+  "reference_p95_ms": 7580.134215250063,
+  "selected_speedup_vs_reference": 3.2768599741687083,
+  "selected_p95_ms": 2113.669616849927,
+  "sentinel": {
+    "e3": {
+      "n": 24,
+      "complete": true,
+      "mean_ms": 957.2328234166675,
+      "p95_ms": 2645.0158661999467,
+      "accuracy_pct": 83.33333333333333,
+      "cer_pct": 2.9761904761904763,
+      "historical_mismatches": 0,
+      "vision": {
+        "ctc_net_hits": 0,
+        "ctc_net_misses": 0,
+        "s2_batches": 0,
+        "s2_items": 0,
+        "r3_batches": 0,
+        "r3_items": 0
+      }
+    },
+    "e4_cache": {
+      "n": 24,
+      "complete": true,
+      "mean_ms": 951.2704963333409,
+      "p95_ms": 2713.426996199973,
+      "accuracy_pct": 83.33333333333333,
+      "cer_pct": 2.9761904761904763,
+      "historical_mismatches": 0,
+      "vision": {
+        "ctc_net_hits": 66,
+        "ctc_net_misses": 400,
+        "s2_batches": 0,
+        "s2_items": 0,
+        "r3_batches": 0,
+        "r3_items": 0
+      }
+    },
+    "e4_batch": {
+      "n": 24,
+      "complete": true,
+      "mean_ms": 799.57610324999,
+      "p95_ms": 2113.669616849927,
+      "accuracy_pct": 83.33333333333333,
+      "cer_pct": 2.9761904761904763,
+      "historical_mismatches": 0,
+      "vision": {
+        "ctc_net_hits": 64,
+        "ctc_net_misses": 353,
+        "s2_batches": 42,
+        "s2_items": 91,
+        "r3_batches": 115,
+        "r3_items": 261
+      }
+    }
+  },
+  "selected_over_baseline_latency_ratio": 89.83917293401416,
+  "note": "Historical 130-row pilot, same-session original on fixed 24-row subset. Selection locked before full inference; no per-image labels used."
+}
