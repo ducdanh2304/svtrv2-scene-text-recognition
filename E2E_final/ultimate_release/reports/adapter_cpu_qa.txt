@@ -1,0 +1,9 @@
+DRY RUN PASS 37 files
+APPLIED 37 files
+DRY RUN PASS 0 files
+ULTIMATE_RUNTIME_READY (simulated source-only runtime)
+CTC CPU PARITY PASS 640 max_abs_delta 0.0
+VISION_CPU_TEST_PASS 13 R3 items / 4 mock batches
+ULTIMATE_ADAPTER_MOCK_PASS (normal inference and exception cleanup)
+CLI --help PASS
+Actual model assets and GPU deployment wrapper NOT TESTED in this environment.
